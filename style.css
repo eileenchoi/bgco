@@ -1917,6 +1917,12 @@ h5 {
   font-weight: 600;
 }
 
+/*----------------------------------------------
+// Media Query Breakpoints
+----------------------------------------------*/
+/*----------------------------------------------
+// Header Hero Styles
+----------------------------------------------*/
 .site-inner {
   background-image: url("/wp-content/uploads/2019/10/giammarco-boscaro-eWpBNXRHfTI-unsplash.jpg");
   background-size: cover;
@@ -1927,6 +1933,12 @@ h5 {
   align-items: center;
   justify-content: flex-start;
 }
+@media only screen and (max-width: 768px) {
+  .site-inner {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
 
 .site-inner .entry-content {
   border: 2px dashed red;
@@ -1934,6 +1946,16 @@ h5 {
   padding: 2rem;
   max-width: 1020px;
   font-family: "Big Caslon Medium";
+}
+@media only screen and (max-width: 768px) {
+  .site-inner .entry-content {
+    border: none;
+    color: #333;
+    background-color: #fff;
+    position: relative;
+    top: 10rem;
+    border-radius: 2px;
+  }
 }
 
 .site-inner h1 {
