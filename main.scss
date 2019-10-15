@@ -1,2 +1,10 @@
-@use 'default';
-@use 'front-page';
+@import 'default';
+@import 'front-page';
+
+// Fonts 
+
+@font-face{
+    font-family: "BigCaslonMedium";
+    src: url('http://bgcov1.local/wordpress/wp-content/themes/bgco-theme/typography/BigCaslonMedium.ttf');
+      
+}
