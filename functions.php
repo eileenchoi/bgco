@@ -67,6 +67,14 @@ add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
  *
  * @since 1.0.0
  */
+
+// Enqueues Google Fonts
+function add_google_fonts(){
+	wp_enqueue_style('https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap');
+}
+
+add_action('wp_enqueue_scripts', 'add_google_fonts');
+
 function genesis_sample_enqueue_scripts_styles() {
 
 	$appearance = genesis_get_config( 'appearance' );

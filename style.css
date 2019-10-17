@@ -308,109 +308,6 @@ textarea:focus,
   transition: all 0.2s ease-in-out;
 }
 
-a {
-  color: #0073e5;
-  text-decoration: underline;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-a:focus,
-a:hover {
-  color: #333;
-  text-decoration: none;
-}
-
-p {
-  margin: 0 0 30px;
-  padding: 0;
-}
-
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style-type: none;
-}
-
-hr {
-  border: none;
-  border-collapse: collapse;
-  border-top: 1px solid #eee;
-  clear: both;
-  margin: 30px 0;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-blockquote,
-cite,
-em,
-i {
-  font-style: italic;
-}
-
-mark {
-  background: #ddd;
-  color: #333;
-}
-
-blockquote {
-  margin: 30px;
-}
-
-/* Headings
---------------------------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "BigCaslonMedium";
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 20px;
-}
-
-h1 {
-  font-size: 30px;
-}
-
-h2 {
-  font-size: 27px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-.entry-content h3,
-.entry-content h4 {
-  font-weight: 600;
-}
-
-.entry-content h4 {
-  margin-top: 40px;
-}
-
-h5 {
-  font-size: 18px;
-}
-
-h6 {
-  font-size: 16px;
-}
-
 /* Objects
 --------------------------------------------- */
 embed,
@@ -822,12 +719,6 @@ th:last-child {
 .entry-title a:focus,
 .entry-title a:hover {
   color: #0073e5;
-}
-
-.widget-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
 
 /* WordPress
@@ -1899,14 +1790,19 @@ ul {
   }
 }
 body {
+  font-family: "Nanum Gothic", sans-serif;
   background-color: #fdfdfd;
   color: #333;
   letter-spacing: 1.38px;
   line-height: 1.625;
   margin: 0;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
+/* Headings
+--------------------------------------------- */
 h1,
 h2,
 h3,
@@ -1914,6 +1810,105 @@ h4,
 h5 {
   font-family: "BigCaslonMedium";
   font-weight: 600;
+}
+
+h1 {
+  font-size: 47px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 27px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+.entry-content h3,
+.entry-content h4 {
+  font-weight: 600;
+}
+
+.entry-content h4 {
+  margin-top: 40px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 18px;
+}
+
+/* Titles
+--------------------------------------------- */
+.widget-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Typogrophy
+--------------------------------------------- */
+a {
+  color: #0073e5;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+a:focus,
+a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+p {
+  margin: 0 0 30px;
+  padding: 0;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+hr {
+  border: none;
+  border-collapse: collapse;
+  border-top: 1px solid #eee;
+  clear: both;
+  margin: 30px 0;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+blockquote,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+mark {
+  background: #ddd;
+  color: #333;
+}
+
+blockquote {
+  margin: 30px;
 }
 
 /*----------------------------------------------
@@ -1931,10 +1926,6 @@ h5 {
 }
 
 .site-header .wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #fdfdfd;
 }
 
@@ -1963,6 +1954,9 @@ h5 {
   padding: 2rem;
   max-width: 1020px;
   font-family: "Big Caslon Medium";
+  margin-bottom: 0 !important;
+  margin-left: -4rem;
+  margin-top: 8rem;
 }
 @media only screen and (max-width: 768px) {
   .site-inner .entry-content {
@@ -1977,6 +1971,17 @@ h5 {
 
 .site-inner h1 {
   font-size: 47px;
+}
+
+.site-inner h1:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 40%;
+  height: 1px;
+  width: 4rem;
+  background: #fff;
+  z-index: 1;
 }
 
 @font-face {
