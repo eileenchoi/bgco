@@ -206,4 +206,20 @@ function genesis_sample_comments_gravatar( $args ) {
 	$args['avatar_size'] = 60;
 	return $args;
 
+
+
 }
+
+
+// Registers 4 front-page widget areas.
+for ( $i = 1; $i <= 4; $i++ ) {
+    genesis_register_widget_area(
+        array(
+            'id'          => "front-page-{$i}",
+            'name'        => __( "Front Page {$i}", 'genesis-sample' ),
+            'description' => __( "This is the front page {$i} section.", 'genesis-sample' ),
+        )
+    );
+}
+
+?>
