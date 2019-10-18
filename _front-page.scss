@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Nanum Gothic', sans-serif; 
-	background-color: gray;
+	background-color: $body;
 	color: $Black;
 	letter-spacing: 1.38px;
 	line-height: 1.625;
@@ -238,6 +238,7 @@ $phone-portrait: 360px;
   position: relative;
   display: flex;
   align-items: center;
+  top: -70px;
   
 
     .widget-wrap {
@@ -288,23 +289,31 @@ $phone-portrait: 360px;
 
 .front-page-2{
   padding: $site-wrapper;
-  border: 2px solid blue;
+  border: 2px dashed blue;
   display: flex;
 
     .wrap{
       border: 2px solid green;
       display: flex;
-      align-items: center;
+      align-items: center; 
+        
     }
 
-    .widget{
-      width: 50%;
+    .wrap {
+      border: 2px dashed green;
+      display: flex;
+      align-items: center;
+      justify-content: space-center;
 
-      .widget-wrap{
-        border: 2px dashed pink;
-        
-      }
+        #text-5 {
+          border: 2px solid cyan;
+          max-width: 60%;
+        }
 
+        #media_image-2{
+          border: 2px solid orange;
+          margin-left: 7rem;
+        }
     }
 }
 

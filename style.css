@@ -1790,7 +1790,7 @@ ul {
 }
 body {
   font-family: "Nanum Gothic", sans-serif;
-  background-color: gray;
+  background-color: #fff;
   color: #333;
   letter-spacing: 1.38px;
   line-height: 1.625;
@@ -1956,6 +1956,7 @@ blockquote {
   position: relative;
   display: flex;
   align-items: center;
+  top: -70px;
 }
 .front-page-1 .widget-wrap {
   color: #fdfdfd;
@@ -2000,7 +2001,7 @@ blockquote {
 ----------------------------------------------*/
 .front-page-2 {
   padding: 0 6rem;
-  border: 2px solid blue;
+  border: 2px dashed blue;
   display: flex;
 }
 .front-page-2 .wrap {
@@ -2008,11 +2009,19 @@ blockquote {
   display: flex;
   align-items: center;
 }
-.front-page-2 .widget {
-  width: 50%;
+.front-page-2 .wrap {
+  border: 2px dashed green;
+  display: flex;
+  align-items: center;
+  justify-content: space-center;
 }
-.front-page-2 .widget .widget-wrap {
-  border: 2px dashed pink;
+.front-page-2 .wrap #text-5 {
+  border: 2px solid cyan;
+  max-width: 60%;
+}
+.front-page-2 .wrap #media_image-2 {
+  border: 2px solid orange;
+  margin-left: 7rem;
 }
 
 @font-face {
