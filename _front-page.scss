@@ -1,5 +1,29 @@
+//--------------------------------------------------------------
+// Mixins
+//--------------------------------------------------------------
 
-// Global Styles
+// Layout
+
+@mixin auto-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin before-title{
+  content:'';
+  position:relative;
+  display:block;
+  height: 2px;
+  width: 5rem;
+  background:$Gold;
+  z-index:1;
+  top: 2rem;
+  right: 13%;
+}
+//--------------------------------------------------------------
+// Global
+//--------------------------------------------------------------
 
 body {
   font-family: 'Nanum Gothic', sans-serif; 
@@ -18,22 +42,6 @@ body {
   padding: $site-wrapper;
 }
 
-.widget-title{
-  font-size: 42px !important;
-}
-
-//--------------------------------------------------------------
-// Mixins
-//--------------------------------------------------------------
-
-// Layout
-
-@mixin auto-center{
-  margin{
-      left: auto;
-      right: auto;
-  }
-}
 
 
 /* Headings
@@ -91,7 +99,7 @@ h6 {
 	margin-bottom: 20px;
 }
 
-/* Typogrophy
+/* Typography
 --------------------------------------------- */
 
 p,
@@ -217,11 +225,11 @@ $phone-portrait: 360px;
 ----------------------------------------------*/
 
 .site-header{
-  background: transparent;
+  background: $Navy;
 }
 
 .genesis-nav-menu a{
-  color: $White !important;
+  color: $Gold !important;
 }
 
 /*----------------------------------------------
@@ -229,7 +237,6 @@ $phone-portrait: 360px;
 ----------------------------------------------*/
 
 .front-page-1{
-  border: 2px solid blue;
   background-image: url('/wp-content/uploads/2019/10/giammarco-boscaro-eWpBNXRHfTI-unsplash.jpg');
   background-size: cover;
   background-position: 50% 10%;
@@ -238,7 +245,7 @@ $phone-portrait: 360px;
   position: relative;
   display: flex;
   align-items: center;
-  top: -70px;
+  // top: -70px;
   
 
     .widget-wrap {
@@ -289,31 +296,106 @@ $phone-portrait: 360px;
 
 .front-page-2{
   padding: $site-wrapper;
-  border: 2px dashed blue;
   display: flex;
-
-    .wrap{
-      border: 2px solid green;
-      display: flex;
-      align-items: center; 
-        
-    }
+  margin: 4rem 0 0 0;
 
     .wrap {
-      border: 2px dashed green;
-      display: flex;
-      align-items: center;
-      justify-content: space-center;
+      @include auto-center;
+      margin-left: 1rem;
 
         #text-5 {
-          border: 2px solid cyan;
           max-width: 60%;
         }
 
         #media_image-2{
-          border: 2px solid orange;
           margin-left: 7rem;
+        }
+
+        h4{
+          font-size: $widget-title;
+          color: $Green;
+          
+        }
+
+        h4::before{
+          @include before-title;
         }
     }
 }
 
+
+/*----------------------------------------------
+// Services Section - Front Page 3/4
+----------------------------------------------*/
+// Front Page 3 widget used as title area
+
+.front-page-3{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100% !important;
+
+  .wrap{
+    h4::before{
+      @include before-title;
+      top: 4rem;
+      left: 50%;
+    }
+  }
+
+  .widgettitle{
+    margin-bottom: 0;
+    font-size: $widget-title;
+    color: $Green;
+
+  }
+
+}
+
+.front-page-4{
+
+    .wrap{
+      @include auto-center;
+      flex-wrap: wrap;
+
+      
+    }
+    section{
+      width: calc(33.33% - 5rem);
+      padding: 2.5rem;
+      margin: 2.5rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      
+        .widget-wrap{
+          @include auto-center;
+          flex-direction: column;
+
+            .widget-title{
+              margin: 0 0 20px 0;
+              color: $Navy;
+
+            }
+
+
+        }
+     
+    }
+}
+
+
+
+/*----------------------------------------------
+// Contact Us - Front Page 5
+----------------------------------------------*/
+.front-page-5{
+  border: 2px solid;
+}
+
+/*----------------------------------------------
+// Footer
+----------------------------------------------*/
+
+.footer-widget-area{
+  padding: 0 2rem;
+
+}

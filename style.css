@@ -1801,11 +1801,7 @@ body {
 }
 
 .widget-area {
-  padding: 0 6rem;
-}
-
-.widget-title {
-  font-size: 42px !important;
+  padding: 0 6rem 6rem 6rem;
 }
 
 /* Headings
@@ -1862,7 +1858,7 @@ h6 {
   margin-bottom: 20px;
 }
 
-/* Typogrophy
+/* Typography
 --------------------------------------------- */
 p,
 a,
@@ -1936,18 +1932,17 @@ blockquote {
 // Primary Navigation Styles - Site Header
 ----------------------------------------------*/
 .site-header {
-  background: transparent;
+  background: #173449;
 }
 
 .genesis-nav-menu a {
-  color: #fdfdfd !important;
+  color: #C18734 !important;
 }
 
 /*----------------------------------------------
 // Header Hero Styles - Front Page 1
 ----------------------------------------------*/
 .front-page-1 {
-  border: 2px solid blue;
   background-image: url("/wp-content/uploads/2019/10/giammarco-boscaro-eWpBNXRHfTI-unsplash.jpg");
   background-size: cover;
   background-position: 50% 10%;
@@ -1956,7 +1951,6 @@ blockquote {
   position: relative;
   display: flex;
   align-items: center;
-  top: -70px;
 }
 .front-page-1 .widget-wrap {
   color: #fdfdfd;
@@ -2000,28 +1994,101 @@ blockquote {
 // About Us Section - Front Page 2
 ----------------------------------------------*/
 .front-page-2 {
-  padding: 0 6rem;
-  border: 2px dashed blue;
+  padding: 0 6rem 6rem 6rem;
   display: flex;
+  margin: 4rem 0 0 0;
 }
 .front-page-2 .wrap {
-  border: 2px solid green;
   display: flex;
   align-items: center;
-}
-.front-page-2 .wrap {
-  border: 2px dashed green;
-  display: flex;
-  align-items: center;
-  justify-content: space-center;
+  justify-content: center;
+  margin-left: 1rem;
 }
 .front-page-2 .wrap #text-5 {
-  border: 2px solid cyan;
   max-width: 60%;
 }
 .front-page-2 .wrap #media_image-2 {
-  border: 2px solid orange;
   margin-left: 7rem;
+}
+.front-page-2 .wrap h4 {
+  font-size: 42px;
+  color: #006A4E;
+}
+.front-page-2 .wrap h4::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 5rem;
+  background: #C18734;
+  z-index: 1;
+  top: 2rem;
+  right: 13%;
+}
+
+/*----------------------------------------------
+// Services Section - Front Page 3/4
+----------------------------------------------*/
+.front-page-3 {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100% !important;
+}
+.front-page-3 .wrap h4::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 5rem;
+  background: #C18734;
+  z-index: 1;
+  top: 2rem;
+  right: 13%;
+  top: 4rem;
+  left: 50%;
+}
+.front-page-3 .widgettitle {
+  margin-bottom: 0;
+  font-size: 42px;
+  color: #006A4E;
+}
+
+.front-page-4 .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.front-page-4 section {
+  width: calc(33.33% - 5rem);
+  padding: 2.5rem;
+  margin: 2.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+.front-page-4 section .widget-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.front-page-4 section .widget-wrap .widget-title {
+  margin: 0 0 20px 0;
+  color: #173449;
+}
+
+/*----------------------------------------------
+// Contact Us - Front Page 5
+----------------------------------------------*/
+.front-page-5 {
+  border: 2px solid;
+}
+
+/*----------------------------------------------
+// Footer
+----------------------------------------------*/
+.footer-widget-area {
+  padding: 0 2rem;
 }
 
 @font-face {
