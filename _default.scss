@@ -1575,14 +1575,11 @@ p.entry-meta {
 	/* Footer Widgets
 	--------------------------------------------- */
 
-	.footer-widgets .wrap {
-		max-width: 1140px;
-	}
 
 	.footer-widget-area {
 		float: left;
 		margin-bottom: 0;
-		width: calc(100% / 3);
+		width: calc(100% / 4);
 	}
 
 }

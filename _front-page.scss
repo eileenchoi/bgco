@@ -15,7 +15,7 @@
   position:relative;
   display:block;
   height: 2px;
-  width: 5rem;
+  width: 12.5%;
   background:$Gold;
   z-index:1;
   top: 2rem;
@@ -298,6 +298,11 @@ $phone-portrait: 360px;
   padding: $site-wrapper;
   display: flex;
   margin: 4rem 0 0 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/fp-2-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+
 
     .wrap {
       @include auto-center;
@@ -339,7 +344,9 @@ $phone-portrait: 360px;
     h4::before{
       @include before-title;
       top: 4rem;
-      left: 50%;
+      right: 0;
+      margin: 0 auto;
+      width: 50%;
     }
   }
 
@@ -364,7 +371,10 @@ $phone-portrait: 360px;
       width: calc(33.33% - 5rem);
       padding: 2.5rem;
       margin: 2.5rem;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 20px rgba(23,52,73, 0.3);
+      border-radius: $border-radius;
+
+  
       
         .widget-wrap{
           @include auto-center;
@@ -372,7 +382,7 @@ $phone-portrait: 360px;
 
             .widget-title{
               margin: 0 0 20px 0;
-              color: $Navy;
+              color: $Gold;
 
             }
 
@@ -397,5 +407,10 @@ $phone-portrait: 360px;
 
 .footer-widget-area{
   padding: 0 2rem;
+
+    .wrap{
+      border: 2px solid red;
+      padding: $site-wrapper;
+    }
 
 }

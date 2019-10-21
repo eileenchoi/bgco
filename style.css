@@ -1641,14 +1641,10 @@ p.entry-meta {
 
   /* Footer Widgets
   --------------------------------------------- */
-  .footer-widgets .wrap {
-    max-width: 1140px;
-  }
-
   .footer-widget-area {
     float: left;
     margin-bottom: 0;
-    width: calc(100% / 3);
+    width: calc(100% / 4);
   }
 }
 /* Print Styles
@@ -1997,6 +1993,10 @@ blockquote {
   padding: 0 6rem 6rem 6rem;
   display: flex;
   margin: 4rem 0 0 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/fp-2-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
 }
 .front-page-2 .wrap {
   display: flex;
@@ -2019,7 +2019,7 @@ blockquote {
   position: relative;
   display: block;
   height: 2px;
-  width: 5rem;
+  width: 12.5%;
   background: #C18734;
   z-index: 1;
   top: 2rem;
@@ -2040,13 +2040,15 @@ blockquote {
   position: relative;
   display: block;
   height: 2px;
-  width: 5rem;
+  width: 12.5%;
   background: #C18734;
   z-index: 1;
   top: 2rem;
   right: 13%;
   top: 4rem;
-  left: 50%;
+  right: 0;
+  margin: 0 auto;
+  width: 50%;
 }
 .front-page-3 .widgettitle {
   margin-bottom: 0;
@@ -2064,7 +2066,8 @@ blockquote {
   width: calc(33.33% - 5rem);
   padding: 2.5rem;
   margin: 2.5rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
+  border-radius: 3px;
 }
 .front-page-4 section .widget-wrap {
   display: flex;
@@ -2074,7 +2077,7 @@ blockquote {
 }
 .front-page-4 section .widget-wrap .widget-title {
   margin: 0 0 20px 0;
-  color: #173449;
+  color: #C18734;
 }
 
 /*----------------------------------------------
@@ -2089,6 +2092,10 @@ blockquote {
 ----------------------------------------------*/
 .footer-widget-area {
   padding: 0 2rem;
+}
+.footer-widget-area .wrap {
+  border: 2px solid red;
+  padding: 0 6rem 6rem 6rem;
 }
 
 @font-face {
