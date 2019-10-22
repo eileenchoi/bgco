@@ -32,7 +32,7 @@
 //--------------------------------------------------------------
 
 body {
-  font-family: 'Nanum Gothic', sans-serif; 
+  font-family: $secondary; 
 	background-color: $body;
 	color: $Black;
 	letter-spacing: 1.38px;
@@ -57,7 +57,7 @@ h2,
 h3,
 h4,
 h5{
-    font-family: "BigCaslonMedium";
+    font-family: $primary;
     font-weight: 600;
     padding: 0;
     line-height: 1.38;
@@ -564,26 +564,76 @@ form{
   }
 }
 
-.footer-widget-area{
-  padding: 0 2rem;
+.footer-widgets{
+  .footer-widget-area{
+    padding: 0 2rem;
+  
+      .wrap{
+        padding: $site-wrapper;
+      }
+  .contact{
+    padding: 0 0 10px 0;
+      .dashicons{
+        display: inline-block;
+        position: relative;
+        right: 12px;
+        font-size: 25px;
+        color: $Green;}
+      }
+
+      .address{
+        display: flex;
+      }
+  }
+  iframe{
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+  }
+  
+  }
+
+  // Site Footer
+
+  .site-footer{
+    line-height: 0.8;
+    border: none;
 
     .wrap{
-      border: 2px solid red;
-      padding: $site-wrapper;
+      .site-footer-copy{
+        display: flex;
+        justify-content: center;
+      }
+      
+
+      .bgco{
+        color: $Gold;
+        font-weight: 600;
+        font-family: $primary;
+        margin: 0 2px;
+      }
+    }
+    .upply,
+    .upply a{
+      font-size: 10px;
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      
+    }
+    .upply a{
+      color: #333;
+      font-weight: bolder
+    }
+    .upply a:hover,
+    .upply a:active,
+    .upply a:focus{
+      color: $Green;
+      
     }
 
-iframe{
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-}
-
-}
-
-.textwidget{
-  border: 2px solid blue;
-
-  .contact{
-    border: 2px solid pink;
+    
   }
-}
+  
+
+
 

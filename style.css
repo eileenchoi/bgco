@@ -2223,22 +2223,59 @@ form .form-container-2 .message {
   left: -12%;
 }
 
-.footer-widget-area {
+.footer-widgets .footer-widget-area {
   padding: 0 2rem;
 }
-.footer-widget-area .wrap {
-  border: 2px solid red;
+.footer-widgets .footer-widget-area .wrap {
   padding: 0 6rem 6rem 6rem;
 }
-.footer-widget-area .wrap .textwidget {
-  border: 2px solid blue;
+.footer-widgets .footer-widget-area .contact {
+  padding: 0 0 10px 0;
 }
-.footer-widget-area .wrap .textwidget .contact {
-  border: 2px solid pink;
+.footer-widgets .footer-widget-area .contact .dashicons {
+  display: inline-block;
+  position: relative;
+  right: 12px;
+  font-size: 25px;
+  color: #006A4E;
 }
-.footer-widget-area iframe {
+.footer-widgets .footer-widget-area .address {
+  display: flex;
+}
+.footer-widgets iframe {
   box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
   border-radius: 3px;
+}
+
+.site-footer {
+  line-height: 0.8;
+  border: none;
+}
+.site-footer .wrap .site-footer-copy {
+  display: flex;
+  justify-content: center;
+}
+.site-footer .wrap .bgco {
+  color: #C18734;
+  font-weight: 600;
+  font-family: "BigCaslonMedium";
+  margin: 0 2px;
+}
+.site-footer .upply,
+.site-footer .upply a {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+.site-footer .upply a {
+  color: #333;
+  font-weight: bolder;
+}
+.site-footer .upply a:hover,
+.site-footer .upply a:active,
+.site-footer .upply a:focus {
+  color: #006A4E;
 }
 
 @font-face {

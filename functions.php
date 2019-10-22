@@ -223,4 +223,14 @@ for ( $i = 1; $i <= 5; $i++ ) {
     );
 }
 
+//* Customize the site footer
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+add_action( 'genesis_footer', 'custom_footer' );
+function custom_footer() {
+	?>
+	<div class="site-footer-copy"><p>&copy; Copyright 2019 - <?php echo date('Y'); ?> &middot;  <p class="bgco">Beirne Gannon & Co. </p> All Rights Reserved.</div><br/><p class="upply">Made by <a href="https://eileenchoi.com">Upply.io 💡</a> 
+	<?php
+}
+
+
 ?>
