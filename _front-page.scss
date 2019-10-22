@@ -21,6 +21,12 @@
   top: 2rem;
   right: 13%;
 }
+
+@mixin widget-title{
+  font-size: 42px;
+  color: $Green;
+  
+}
 //--------------------------------------------------------------
 // Global
 //--------------------------------------------------------------
@@ -314,11 +320,13 @@ $phone-portrait: 360px;
 
         #media_image-2{
           margin-left: 7rem;
+          box-shadow: $box-shadow;
+          border-radius: $border-radius;
+          
         }
 
         h4{
-          font-size: $widget-title;
-          color: $Green;
+          @include widget-title;
           
         }
 
@@ -351,9 +359,9 @@ $phone-portrait: 360px;
   }
 
   .widgettitle{
+    @include widget-title;
     margin-bottom: 0;
-    font-size: $widget-title;
-    color: $Green;
+    
 
   }
 
@@ -371,7 +379,7 @@ $phone-portrait: 360px;
       width: calc(33.33% - 5rem);
       padding: 2.5rem;
       margin: 2.5rem;
-      box-shadow: 0 0 20px rgba(23,52,73, 0.3);
+      box-shadow: $box-shadow;
       border-radius: $border-radius;
 
   
@@ -397,13 +405,164 @@ $phone-portrait: 360px;
 /*----------------------------------------------
 // Contact Us - Front Page 5
 ----------------------------------------------*/
+
 .front-page-5{
-  border: 2px solid;
+  padding: $site-wrapper;
+  display: flex;
+  margin: 4rem 0 0 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+
+    .wrap{
+      display: flex;
+      margin-left: 1rem;
+
+      section{
+        width: calc(50% - 2rem);
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        
+
+          .widget-wrap{
+            margin-left: 1rem;
+          }
+
+          h4{
+            @include widget-title;
+          }
+
+          h4::before{
+            @include before-title;
+            left: 34% !important;
+          }
+      }
+    }
+    
 }
+
+.form-container{
+
+  input:focus,
+  input:active,
+  input:hover,
+  textarea:focus,
+  textarea:active,
+  textarea:hover{
+    border-color: $Green;
+  }
+
+  input[type="submit"]{
+    background-color: $Navy;
+    font-size: 14px;
+    padding: 15px 60px;
+    font-weight: 400;
+    letter-spacing: $letter-spacing;
+    display: block;
+    margin: 0 auto;
+    border-radius: $border-radius;
+  }
+  input[type="submit"]:hover,
+    input[type="submit"]:active,
+    input[type="submit"]:focus{
+      background-color: $Green;
+      transition: 0.3s ease-in-out;
+    }
+}
+form{
+  display: flex;
+  max-width: 540px;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+
+
+    p{
+      margin: 0;
+    }
+
+    input, 
+    textarea{
+      border-color: $Gold;
+      padding: 10px 120px 10px 10px;
+      font-size: 14px;
+    }
+    
+    label{
+      margin: 5px;
+      border-radius: $border-radius;
+        ::placeholder{
+          color: gray;
+        }
+    }
+
+    .form-fields{
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .name{
+      display: flex;
+      
+    }
+
+    .form-container-2{
+      border: 2px solid blue;
+      display: flex;
+      flex-direction: column;
+
+
+      .radio{
+        border: 2px solid purple;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        span.wpcf7-list-item{
+          margin: 10px !important;
+        }
+      }
+
+      .message{
+        border: 2px solid cyan;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+}
+
+
+
 
 /*----------------------------------------------
 // Footer
 ----------------------------------------------*/
+
+.footer-widgets{
+  padding: $site-wrapper;
+  padding-top: 6rem;
+  
+
+  h3{
+    color: $Gold;
+    margin-left: 2rem;
+  }
+  h3:before{
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 9.5%;
+  background: #006A4E;
+  z-index: 1;
+  top: 15px;
+  left: -12%;
+  }
+}
 
 .footer-widget-area{
   padding: 0 2rem;
@@ -413,4 +572,18 @@ $phone-portrait: 360px;
       padding: $site-wrapper;
     }
 
+iframe{
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
 }
+
+}
+
+.textwidget{
+  border: 2px solid blue;
+
+  .contact{
+    border: 2px solid pink;
+  }
+}
+

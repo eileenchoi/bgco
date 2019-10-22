@@ -407,9 +407,9 @@ textarea {
   background-color: #fff;
   border: 1px solid #ddd;
   color: #333;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 400;
-  padding: 15px;
+  padding: 10px;
   width: 100%;
 }
 
@@ -475,9 +475,9 @@ input[type=submit]:hover,
 .site-container div.wpforms-container-full .wpforms-form button[type=submit]:hover,
 .button:focus,
 .button:hover {
-  background-color: #0073e5;
   border-width: 0;
   color: #fff;
+  border-color: red;
 }
 
 .entry-content .button:focus,
@@ -1862,7 +1862,7 @@ ol,
 ul,
 li,
 button {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 a {
@@ -2009,6 +2009,8 @@ blockquote {
 }
 .front-page-2 .wrap #media_image-2 {
   margin-left: 7rem;
+  box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
+  border-radius: 3px;
 }
 .front-page-2 .wrap h4 {
   font-size: 42px;
@@ -2051,9 +2053,9 @@ blockquote {
   width: 50%;
 }
 .front-page-3 .widgettitle {
-  margin-bottom: 0;
   font-size: 42px;
   color: #006A4E;
+  margin-bottom: 0;
 }
 
 .front-page-4 .wrap {
@@ -2084,18 +2086,159 @@ blockquote {
 // Contact Us - Front Page 5
 ----------------------------------------------*/
 .front-page-5 {
-  border: 2px solid;
+  padding: 0 6rem 6rem 6rem;
+  display: flex;
+  margin: 4rem 0 0 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+.front-page-5 .wrap {
+  display: flex;
+  margin-left: 1rem;
+}
+.front-page-5 .wrap section {
+  width: calc(50% - 2rem);
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+.front-page-5 .wrap section .widget-wrap {
+  margin-left: 1rem;
+}
+.front-page-5 .wrap section h4 {
+  font-size: 42px;
+  color: #006A4E;
+}
+.front-page-5 .wrap section h4::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 12.5%;
+  background: #C18734;
+  z-index: 1;
+  top: 2rem;
+  right: 13%;
+  left: 34% !important;
+}
+
+.form-container input:focus,
+.form-container input:active,
+.form-container input:hover,
+.form-container textarea:focus,
+.form-container textarea:active,
+.form-container textarea:hover {
+  border-color: #006A4E;
+}
+.form-container input[type=submit] {
+  background-color: #173449;
+  font-size: 14px;
+  padding: 15px 60px;
+  font-weight: 400;
+  letter-spacing: 1.38px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.form-container input[type=submit]:hover,
+.form-container input[type=submit]:active,
+.form-container input[type=submit]:focus {
+  background-color: #006A4E;
+  transition: 0.3s ease-in-out;
+}
+
+form {
+  display: flex;
+  max-width: 540px;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
+  border-radius: 3px;
+}
+form p {
+  margin: 0;
+}
+form input,
+form textarea {
+  border-color: #C18734;
+  padding: 10px 120px 10px 10px;
+  font-size: 14px;
+}
+form label {
+  margin: 5px;
+  border-radius: 3px;
+}
+form label ::placeholder {
+  color: gray;
+}
+form .form-fields {
+  display: flex;
+  justify-content: center;
+}
+form .name {
+  display: flex;
+}
+form .form-container-2 {
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: column;
+}
+form .form-container-2 .radio {
+  border: 2px solid purple;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+form .form-container-2 .radio span.wpcf7-list-item {
+  margin: 10px !important;
+}
+form .form-container-2 .message {
+  border: 2px solid cyan;
+  display: block;
+  margin: 0 auto;
 }
 
 /*----------------------------------------------
 // Footer
 ----------------------------------------------*/
+.footer-widgets {
+  padding: 0 6rem 6rem 6rem;
+  padding-top: 6rem;
+}
+.footer-widgets h3 {
+  color: #C18734;
+  margin-left: 2rem;
+}
+.footer-widgets h3:before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 9.5%;
+  background: #006A4E;
+  z-index: 1;
+  top: 15px;
+  left: -12%;
+}
+
 .footer-widget-area {
   padding: 0 2rem;
 }
 .footer-widget-area .wrap {
   border: 2px solid red;
   padding: 0 6rem 6rem 6rem;
+}
+.footer-widget-area .wrap .textwidget {
+  border: 2px solid blue;
+}
+.footer-widget-area .wrap .textwidget .contact {
+  border: 2px solid pink;
+}
+.footer-widget-area iframe {
+  box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
+  border-radius: 3px;
 }
 
 @font-face {
