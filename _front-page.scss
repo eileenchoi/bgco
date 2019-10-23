@@ -34,7 +34,7 @@
 body {
   font-family: $secondary; 
 	background-color: $body;
-	color: $Black;
+	color: $Navy;
 	letter-spacing: 1.38px;
 	line-height: 1.625;
 	margin: 0;
@@ -269,8 +269,8 @@ $phone-portrait: 360px;
         display:block;
         top: 40%;
         height: 1px;
-        width: 4rem;
-        background:#fff;
+        width: 8rem;
+        background:$Gold;
         z-index:1;
       }
 
@@ -567,6 +567,16 @@ form{
 
   .footer-widget-area{
     padding: 0 2rem;
+
+    a{
+      font-size: 14px;
+      text-decoration: none;
+      color: $Green;
+      margin: 10px 0;
+      padding: 0;
+
+
+    }
 
     section{
       

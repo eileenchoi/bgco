@@ -1787,7 +1787,7 @@ ul {
 body {
   font-family: "Nanum Gothic", sans-serif;
   background-color: #fff;
-  color: #333;
+  color: #173449;
   letter-spacing: 1.38px;
   line-height: 1.625;
   margin: 0;
@@ -1962,8 +1962,8 @@ blockquote {
   display: block;
   top: 40%;
   height: 1px;
-  width: 4rem;
-  background: #fff;
+  width: 8rem;
+  background: #C18734;
   z-index: 1;
 }
 .front-page-1 .widget-wrap .hero-copy {
@@ -2224,6 +2224,13 @@ form .form-container-2 .message {
 
 .footer-widgets .footer-widget-area {
   padding: 0 2rem;
+}
+.footer-widgets .footer-widget-area a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #006A4E;
+  margin: 10px 0;
+  padding: 0;
 }
 .footer-widgets .footer-widget-area section .widget-wrap .textwidget {
   font-size: 14px;
