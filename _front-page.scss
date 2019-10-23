@@ -436,7 +436,7 @@ $phone-portrait: 360px;
 
           h4::before{
             @include before-title;
-            left: 34% !important;
+            left: 48% !important;
           }
       }
     }
@@ -543,8 +543,7 @@ form{
 ----------------------------------------------*/
 
 .footer-widgets{
-  padding: $site-wrapper;
-  padding-top: 6rem;
+  padding: 6rem 2rem;
   
 
   h3{
@@ -565,14 +564,26 @@ form{
 }
 
 .footer-widgets{
+
   .footer-widget-area{
     padding: 0 2rem;
-  
-      .wrap{
-        padding: $site-wrapper;
+
+    section{
+      
+      .widget-wrap{
+        .textwidget {
+          font-size: 14px;
+        }
       }
+
+    }
+    
+  
+     
   .contact{
     padding: 0 0 10px 0;
+    
+    
       .dashicons{
         display: inline-block;
         position: relative;
@@ -583,6 +594,9 @@ form{
 
       .address{
         display: flex;
+      }
+      p{
+        font-size: 14px;
       }
   }
   iframe{
