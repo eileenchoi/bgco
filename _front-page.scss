@@ -435,8 +435,15 @@ $phone-portrait: 360px;
           }
 
           h4::before{
-            @include before-title;
-            left: 48% !important;
+            content: "";
+            position: absolute;
+            display: block;
+            height: 2px;
+            width: 3.5%;
+            background: #C18734;
+            z-index: 1;
+            bottom: -290%;
+            left: 23.5%;
           }
       }
     }
