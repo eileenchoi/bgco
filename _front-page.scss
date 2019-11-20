@@ -268,8 +268,8 @@ $phone-portrait: 360px;
         position:absolute;
         display:block;
         top: 40%;
-        height: 1px;
-        width: 8rem;
+        height: 2px;
+        width: 12rem;
         background:$Gold;
         z-index:1;
       }
@@ -435,15 +435,9 @@ $phone-portrait: 360px;
           }
 
           h4::before{
-            content: "";
-            position: absolute;
-            display: block;
-            height: 2px;
-            width: 3.5%;
-            background: #C18734;
-            z-index: 1;
-            bottom: -290%;
-            left: 23.5%;
+            @include before-title;
+            left: 38% !important;
+            right: 0 !important;
           }
       }
     }

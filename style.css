@@ -1961,8 +1961,8 @@ blockquote {
   position: absolute;
   display: block;
   top: 40%;
-  height: 1px;
-  width: 8rem;
+  height: 2px;
+  width: 12rem;
   background: #C18734;
   z-index: 1;
 }
@@ -2121,7 +2121,8 @@ blockquote {
   z-index: 1;
   top: 2rem;
   right: 13%;
-  left: 48% !important;
+  left: 38% !important;
+  right: 0 !important;
 }
 
 .form-container input:focus,

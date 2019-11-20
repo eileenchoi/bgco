@@ -1,0 +1,15 @@
+####### DELIVERABLES
+Custom design and development of website built on Wordpress 
+Responsive design and development for mobile devices and tablets 
+Host and Domain setup 
+Website migration to host 
+Standard Logo - may use open source graphics or licensed creative material 
+Copywriting 
+Content editing 
+Image Sourcing & Editing 
+Full Website Technical Audit and cross browser testing 
+GDPR compliance pages & notices 
+Google Site Registration 
+Malware & Virus protection (Wordfence installation and configuration) 
+1 hour Wordpress CMS training 
+1 month post-build support
