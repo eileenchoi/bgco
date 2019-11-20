@@ -717,7 +717,7 @@ th:last-child {
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: #0073e5;
+  color: #eaeaea;
 }
 
 /* WordPress
@@ -893,7 +893,7 @@ img.alignright,
 .gs-faq__question:focus,
 .gs-faq__question:hover {
   background: transparent;
-  color: #0073e5;
+  color: #eaeaea;
 }
 
 .gs-faq__question::after {
@@ -1053,6 +1053,7 @@ img.alignright,
   padding-bottom: 12px;
   padding-top: 12px;
   text-decoration: none;
+  text-align: center;
 }
 
 .genesis-nav-menu a:focus,
@@ -1060,7 +1061,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #0073e5;
+  color: #eaeaea;
   text-decoration: none;
 }
 
@@ -1123,7 +1124,7 @@ img.alignright,
 .sub-menu-toggle {
   background-color: transparent;
   border-width: 0;
-  color: #333;
+  color: #C18734;
   display: block;
   margin: 0 auto;
   overflow: hidden;
@@ -1137,7 +1138,7 @@ img.alignright,
 .sub-menu-toggle:hover {
   background-color: transparent;
   border-width: 0;
-  color: #0073e5;
+  color: #eaeaea;
 }
 
 .menu-toggle {
@@ -1408,21 +1409,6 @@ p.entry-meta {
   margin-bottom: 0;
 }
 
-/* Site Footer
----------------------------------------------------------------------------- */
-.site-footer {
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  font-size: 15px;
-  line-height: 1.5;
-  padding: 30px;
-  text-align: center;
-}
-
-.site-footer p {
-  margin-bottom: 0;
-}
-
 /* Media Queries
 ---------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) {
@@ -1472,7 +1458,7 @@ p.entry-meta {
 
   .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-    background-color: #0073e5;
+    background-color: #eaeaea;
   }
 
   .genesis-nav-menu .sub-menu,
@@ -1784,6 +1770,17 @@ ul {
     page-break-before: avoid;
   }
 }
+/*----------------------------------------------
+// Primary Navigation Styles - Site Header
+----------------------------------------------*/
+.site-header {
+  background: #173449;
+}
+
+.genesis-nav-menu a {
+  color: #C18734 !important;
+}
+
 body {
   font-family: "Nanum Gothic", sans-serif;
   background-color: #fff;
@@ -1811,6 +1808,7 @@ h5 {
   font-weight: 600;
   padding: 0;
   line-height: 1.38;
+  letter-spacing: 1.38px;
 }
 
 h1 {
@@ -1924,15 +1922,10 @@ blockquote {
 /*----------------------------------------------
 // Media Query Breakpoints
 ----------------------------------------------*/
-/*----------------------------------------------
-// Primary Navigation Styles - Site Header
-----------------------------------------------*/
-.site-header {
-  background: #173449;
-}
-
-.genesis-nav-menu a {
-  color: #C18734 !important;
+@media only screen and (max-width: 783px) {
+  .widget-area {
+    padding: 0 3rem 3rem 3rem;
+  }
 }
 
 /*----------------------------------------------
@@ -1949,12 +1942,27 @@ blockquote {
   align-items: center;
 }
 .front-page-1 .widget-wrap {
-  color: #fdfdfd;
+  color: #eaeaea;
   max-width: 680px;
   font-family: "Big Caslon Medium";
   margin-bottom: 0 !important;
   position: relative;
   top: 2rem;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-1 .widget-wrap {
+    max-width: 440px;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .front-page-1 .widget-wrap {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .front-page-1 .widget-wrap h1 {
+    font-size: 40px;
+  }
 }
 .front-page-1 .widget-wrap h1:before {
   content: "";
@@ -2205,7 +2213,8 @@ form .form-container-2 .message {
 // Footer
 ----------------------------------------------*/
 .footer-widgets {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
+  background-color: #173449;
 }
 .footer-widgets h3 {
   color: #C18734;
@@ -2233,8 +2242,12 @@ form .form-container-2 .message {
   margin: 10px 0;
   padding: 0;
 }
+.footer-widgets .footer-widget-area p {
+  color: #eaeaea;
+}
 .footer-widgets .footer-widget-area section .widget-wrap .textwidget {
   font-size: 14px;
+  color: #eaeaea;
 }
 .footer-widgets .footer-widget-area .contact {
   padding: 0 0 10px 0;
@@ -2257,13 +2270,27 @@ form .form-container-2 .message {
   border-radius: 3px;
 }
 
+.footer-widgets-4 {
+  padding: 0 1rem !important;
+  margin-left: -15px;
+}
+
 .site-footer {
+  text-align: center;
   line-height: 0.8;
-  border: none;
+  background-color: #173449;
+  border-top: 1px solid #C18734;
+  color: #006A4E;
+  padding: 20px;
+}
+.site-footer p {
+  margin-bottom: 0;
+  font-size: 12px;
 }
 .site-footer .wrap .site-footer-copy {
   display: flex;
   justify-content: center;
+  font-size: 12px;
 }
 .site-footer .wrap .bgco {
   color: #C18734;
@@ -2279,7 +2306,7 @@ form .form-container-2 .message {
   text-decoration: none;
 }
 .site-footer .upply a {
-  color: #333;
+  color: #C18734;
   font-weight: bolder;
 }
 .site-footer .upply a:hover,

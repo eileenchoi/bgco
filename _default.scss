@@ -599,7 +599,7 @@ th:last-child {
 
 .entry-title a:focus,
 .entry-title a:hover {
-	color: #0073e5;
+	color: $White;
 }
 
 
@@ -785,7 +785,7 @@ img.alignright,
 .gs-faq__question:focus,
 .gs-faq__question:hover {
 	background: transparent;
-	color: #0073e5;
+	color: $White;
 }
 
 .gs-faq__question::after {
@@ -952,6 +952,7 @@ img.alignright,
 	padding-bottom: 12px;
 	padding-top: 12px;
 	text-decoration: none;
+	text-align: center;
 }
 
 .genesis-nav-menu a:focus,
@@ -959,7 +960,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+	color: $White;
 	text-decoration: none;
 }
 
@@ -1023,7 +1024,7 @@ img.alignright,
 .sub-menu-toggle {
 	background-color: transparent;
 	border-width: 0;
-	color: #333;
+	color: $Gold;
 	display: block;
 	margin: 0 auto;
 	overflow: hidden;
@@ -1037,7 +1038,7 @@ img.alignright,
 .sub-menu-toggle:hover {
 	background-color: transparent;
 	border-width: 0;
-	color: #0073e5;
+	color: $White;
 }
 
 .menu-toggle {
@@ -1319,22 +1320,6 @@ p.entry-meta {
 }
 
 
-/* Site Footer
----------------------------------------------------------------------------- */
-
-.site-footer {
-	background-color: #fff;
-	border-top: 1px solid #eee;
-	font-size: 15px;
-	line-height: 1.5;
-	padding: 30px;
-	text-align: center;
-}
-
-.site-footer p {
-	margin-bottom: 0;
-}
-
 
 /* Media Queries
 ---------------------------------------------------------------------------- */
@@ -1392,7 +1377,7 @@ p.entry-meta {
 
 	.genesis-nav-menu > .menu-highlight > a:focus,
 	.genesis-nav-menu > .menu-highlight > a:hover {
-		background-color: #0073e5;
+		background-color: $White;
 	}
 
 	.genesis-nav-menu .sub-menu,

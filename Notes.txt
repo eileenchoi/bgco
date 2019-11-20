@@ -13,3 +13,20 @@ Google Site Registration
 Malware & Virus protection (Wordfence installation and configuration) 
 1 hour Wordpress CMS training 
 1 month post-build support
+
+##### TASK LIST #####
+
+Source and deliver alternative header images 
+
+Fix ::before/::after title effects
+Mobile responsiveness
+Tablet responsiveness
+Large Screen responsiveness
+Test on Firefox
+Test on Safari
+
+Register on Google
+Configure Yoast/SEO 
+Configure Wordfence
+
+Confirm Web Host
