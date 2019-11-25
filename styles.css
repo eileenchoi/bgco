@@ -717,7 +717,7 @@ th:last-child {
 
 .entry-title a:focus,
 .entry-title a:hover {
-  color: #f6f6f6;
+  color: #eaeaea;
 }
 
 /* WordPress
@@ -893,7 +893,7 @@ img.alignright,
 .gs-faq__question:focus,
 .gs-faq__question:hover {
   background: transparent;
-  color: #f6f6f6;
+  color: #eaeaea;
 }
 
 .gs-faq__question::after {
@@ -1061,7 +1061,7 @@ img.alignright,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-  color: #f6f6f6;
+  color: #eaeaea;
   text-decoration: none;
 }
 
@@ -1138,12 +1138,12 @@ img.alignright,
 .sub-menu-toggle:hover {
   background-color: transparent;
   border-width: 0;
-  color: #f6f6f6;
+  color: #eaeaea;
 }
 
 .menu-toggle {
   float: right;
-  line-height: 24px;
+  line-height: 20px;
   margin-bottom: 10px;
   margin-top: 10px;
   padding: 15px 0;
@@ -1458,7 +1458,7 @@ p.entry-meta {
 
   .genesis-nav-menu > .menu-highlight > a:focus,
 .genesis-nav-menu > .menu-highlight > a:hover {
-    background-color: #f6f6f6;
+    background-color: #eaeaea;
   }
 
   .genesis-nav-menu .sub-menu,
@@ -1771,36 +1771,19 @@ ul {
   }
 }
 /*----------------------------------------------
-// Media Query Breakpoints
-----------------------------------------------*/
-/*----------------------------------------------
 // Primary Navigation Styles - Site Header
 ----------------------------------------------*/
 .site-header {
   background: #173449;
-}
-@media only screen and (max-width: 360px) {
-  .site-header {
-    padding: 0 10px;
-  }
 }
 
 .genesis-nav-menu a {
   color: #C18734 !important;
 }
 
-@media only screen and (max-width: 360px) {
-  .wp-custom-logo .site-container .title-area {
-    position: relative;
-    top: 6px;
-    right: 10px;
-    max-width: 200px !important;
-  }
-}
-
 body {
   font-family: "Nanum Gothic", sans-serif;
-  background-color: #f6f6f6;
+  background-color: #fff;
   color: #173449;
   letter-spacing: 1.38px;
   line-height: 1.625;
@@ -1944,16 +1927,6 @@ blockquote {
     padding: 0 3rem 3rem 3rem;
   }
 }
-@media only screen and (max-width: 640px) {
-  .widget-area {
-    padding: 3rem;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .widget-area {
-    padding: 1rem;
-  }
-}
 
 /*----------------------------------------------
 // Header Hero Styles - Front Page 1
@@ -1968,61 +1941,38 @@ blockquote {
   display: flex;
   align-items: center;
 }
-@media only screen and (max-width: 768px) {
-  .front-page-1 {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-}
-@media only screen and (max-width: 768px) and (max-width: 640px) {
-  .front-page-1 {
-    height: unset;
-  }
-}
 .front-page-1 .widget-wrap {
-  color: #f6f6f6;
+  color: #eaeaea;
   max-width: 680px;
   font-family: "Big Caslon Medium";
   margin-bottom: 0 !important;
   position: relative;
+  top: 2rem;
 }
 @media only screen and (max-width: 1024px) {
   .front-page-1 .widget-wrap {
     max-width: 400px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 783px) {
   .front-page-1 .widget-wrap {
-    max-width: 330px;
+    max-width: 400px;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
   .front-page-1 .widget-wrap {
-    max-width: 100%;
+    border: none;
     color: #333;
-    background: #f6f6f6;
-    border-radius: 3px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
+    background-color: #fff;
     position: relative;
-    top: 12rem;
+    top: 0rem;
+    left: -9rem;
+    border-radius: 2px;
   }
 }
 @media only screen and (max-width: 783px) {
   .front-page-1 .widget-wrap h1 {
-    font-size: 37px;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .front-page-1 .widget-wrap h1 {
-    font-size: 32px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .front-page-1 .widget-wrap h1 {
-    font-size: 24px;
-    margin: 0 0 0.67em 0;
+    font-size: 40px;
   }
 }
 .front-page-1 .widget-wrap h1:before {
@@ -2031,7 +1981,7 @@ blockquote {
   display: block;
   top: 40%;
   height: 2px;
-  width: 9rem;
+  width: 12rem;
   background: #C18734;
   z-index: 1;
 }
@@ -2040,27 +1990,13 @@ blockquote {
     width: 5rem;
   }
 }
-@media only screen and (max-width: 360px) {
-  .front-page-1 .widget-wrap h1:before {
-    top: 38%;
-  }
-}
 .front-page-1 .widget-wrap .hero-copy {
   font-size: 22px;
 }
-@media only screen and (max-width: 783px) {
-  .front-page-1 .widget-wrap .hero-copy {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .front-page-1 .widget-wrap .hero-copy {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .front-page-1 .widget-wrap .hero-copy {
-    font-size: 14px;
+@media only screen and (max-width: 768px) {
+  .front-page-1 {
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
@@ -2313,11 +2249,11 @@ form .form-container-2 .message {
   padding: 0;
 }
 .footer-widgets .footer-widget-area p {
-  color: #f6f6f6;
+  color: #eaeaea;
 }
 .footer-widgets .footer-widget-area section .widget-wrap .textwidget {
   font-size: 14px;
-  color: #f6f6f6;
+  color: #eaeaea;
 }
 .footer-widgets .footer-widget-area .contact {
   padding: 0 0 10px 0;
@@ -2390,4 +2326,4 @@ form .form-container-2 .message {
   src: url("http://bgcov1.local/wordpress/wp-content/themes/bgco-theme/typography/BigCaslonMedium.ttf");
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

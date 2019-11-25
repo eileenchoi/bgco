@@ -33,7 +33,7 @@
 
 body {
   font-family: $secondary; 
-	background-color: $body;
+	background-color: $White;
 	color: $Navy;
 	letter-spacing: 1.38px;
 	line-height: 1.625;
@@ -231,12 +231,18 @@ $phone-portrait: 360px;
   @include media (null, $wp-admin-bar){
     padding: 0 3rem 3rem 3rem;
   }
+
+  @include media (null, $phone-landscape){
+    padding: 3rem;
+  }
+
+  @include media (null, $phone-portrait){
+    padding: 1rem;
+  }
 }
 /*----------------------------------------------
 // Header Hero Styles - Front Page 1
 ----------------------------------------------*/
-
-
 
 .front-page-1{
   background-image: url('/wp-content/uploads/2019/10/giammarco-boscaro-eWpBNXRHfTI-unsplash.jpg');
@@ -247,6 +253,18 @@ $phone-portrait: 360px;
   position: relative;
   display: flex;
   align-items: center;
+
+    @include media(null, $tablet-portrait){
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @include media(null, $phone-landscape){
+      height: unset;
+    }
+    
+
+}
  
     .widget-wrap {
       color: $White;
@@ -254,20 +272,40 @@ $phone-portrait: 360px;
       font-family: 'Big Caslon Medium';
       margin-bottom: 0 !important;
       position: relative;
-      top: 2rem;
 
       @include media (null, $tablet-landscape){
-        max-width: 440px;
+        max-width: 400px;
       }
 
-      @include media (null, $wp-admin-bar){
-        max-width: 400px;
+      @include media (null, $phone-landscape){
+        max-width: 330px;
+      }
+
+      @include media (null, $phone-portrait){
+        max-width: 100%;
+        color: $Black;
+        background: $White;
+        border-radius: $border-radius;
+        padding: 20px;
+        box-shadow: $box-shadow;
+        position: relative;
+        top: 12rem;
       }
       
       h1{
         @include media (null, $wp-admin-bar){
-          font-size: 40px;
+          font-size: 37px;
         }
+
+        @include media (null, $phone-landscape){
+          font-size: 32px;
+        }
+
+        @include media (null, $phone-portrait){
+          font-size: 24px;
+          margin: 0 0 0.67em 0;
+        }
+        
       }
 
       h1:before{
@@ -276,29 +314,37 @@ $phone-portrait: 360px;
         display:block;
         top: 40%;
         height: 2px;
-        width: 12rem;
+        width: 9rem;
         background:$Gold;
         z-index:1;
+
+          @include media (null, $wp-admin-bar){
+            width: 5rem;
+          }
+          @include media (null, $phone-portrait){
+            top: 38%;
+          }
       }
 
       .hero-copy{
         font-size: 22px;
+
+        @include media (null, $wp-admin-bar){
+          font-size: 18px;
+        }
+
+        @include media (null, $phone-landscape){
+          font-size: 16px;
+        }
+
+        @include media (null, $phone-portrait){
+          font-size: 14px;
+        }
       }
 
-        @include media(null, $tablet-portrait){
-          border: none;
-          color: #333;
-          background-color: #fff;
-          position: relative;
-          top: 10rem;
-          border-radius: 2px;
-      }
     }
 
-    @include media(null, $tablet-portrait){
-              flex-direction: column;
-              justify-content: flex-end;
-          }
+   
 }
 
 
