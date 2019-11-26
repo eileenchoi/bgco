@@ -289,7 +289,7 @@ $phone-portrait: 360px;
         padding: 20px;
         box-shadow: $box-shadow;
         position: relative;
-        top: 12rem;
+        top: 9rem;
       }
       
       h1{
@@ -321,8 +321,21 @@ $phone-portrait: 360px;
           @include media (null, $wp-admin-bar){
             width: 5rem;
           }
+          @media (max-width: 380px){
+            top: 35%;
+          }
+
           @include media (null, $phone-portrait){
+            width: 4.5rem;
             top: 38%;
+          }
+
+          @media (max-width: 325px){
+            top: 35%;
+          }
+
+          @media (max-width: 300px){
+            top: 32%;
           }
       }
 
@@ -361,7 +374,7 @@ $phone-portrait: 360px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
-
+  
 
     .wrap {
       @include auto-center;
@@ -463,10 +476,11 @@ $phone-portrait: 360px;
   padding: $site-wrapper;
   display: flex;
   margin: 4rem 0 0 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
+  background-image: linear-gradient(rgba(246, 246, 246, 0.9), rgba(246, 246, 246, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
+  
 
     .wrap{
       display: flex;

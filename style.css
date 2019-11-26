@@ -2006,7 +2006,7 @@ blockquote {
     padding: 20px;
     box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
     position: relative;
-    top: 12rem;
+    top: 9rem;
   }
 }
 @media only screen and (max-width: 783px) {
@@ -2040,9 +2040,25 @@ blockquote {
     width: 5rem;
   }
 }
+@media (max-width: 380px) {
+  .front-page-1 .widget-wrap h1:before {
+    top: 35%;
+  }
+}
 @media only screen and (max-width: 360px) {
   .front-page-1 .widget-wrap h1:before {
+    width: 4.5rem;
     top: 38%;
+  }
+}
+@media (max-width: 325px) {
+  .front-page-1 .widget-wrap h1:before {
+    top: 35%;
+  }
+}
+@media (max-width: 300px) {
+  .front-page-1 .widget-wrap h1:before {
+    top: 32%;
   }
 }
 .front-page-1 .widget-wrap .hero-copy {
@@ -2167,7 +2183,7 @@ blockquote {
   padding: 0 6rem 6rem 6rem;
   display: flex;
   margin: 4rem 0 0 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
+  background-image: linear-gradient(rgba(246, 246, 246, 0.9), rgba(246, 246, 246, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
