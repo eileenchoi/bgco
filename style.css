@@ -1798,6 +1798,9 @@ ul {
   }
 }
 
+/*----------------------------------------------
+// Media Query Breakpoints
+----------------------------------------------*/
 body {
   font-family: "Nanum Gothic", sans-serif;
   background-color: #f6f6f6;
@@ -1812,6 +1815,25 @@ body {
 
 .widget-area {
   padding: 0 6rem 6rem 6rem;
+}
+@media only screen and (max-width: 783px) {
+  .widget-area {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .widget-area {
+    padding: 3rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .widget-area {
+    padding: 1rem;
+  }
+}
+
+.widget-area .wrap {
+  margin: 4rem 1rem 0 0;
 }
 
 /* Headings
@@ -1934,25 +1956,6 @@ mark {
 
 blockquote {
   margin: 30px;
-}
-
-/*----------------------------------------------
-// Media Query Breakpoints
-----------------------------------------------*/
-@media only screen and (max-width: 783px) {
-  .widget-area {
-    padding: 0 3rem 3rem 3rem;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .widget-area {
-    padding: 3rem;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .widget-area {
-    padding: 1rem;
-  }
 }
 
 /*----------------------------------------------
@@ -2084,31 +2087,111 @@ blockquote {
 // About Us Section - Front Page 2
 ----------------------------------------------*/
 .front-page-2 {
-  padding: 0 6rem 6rem 6rem;
   display: flex;
   margin: 4rem 0 0 0;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url(/wp-content/uploads/2019/10/fp-2-bg.png);
+  background-image: url(/wp-content/uploads/2019/11/fp-2-bg-new.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-2 {
+    background-size: 65%;
+    background-position: 0% 20%;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .front-page-2 {
+    background-position: 70% 50%;
+    background-size: 80%;
+  }
+}
+.front-page-2 .about-responsive img {
+  display: none;
+  box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
+  margin: 15px 0px 15px 15px;
+  border-radius: 3px;
+}
+@media (max-width: 900px) {
+  .front-page-2 .about-responsive img {
+    display: block;
+    float: right;
+    max-width: 30%;
+  }
+}
+.front-page-2 #fp2-responsive {
+  display: none;
+}
+@media (max-width: 900px) {
+  .front-page-2 #fp2-responsive {
+    display: block;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .front-page-2 #fp2-responsive {
+    position: relative;
+    left: 3rem;
+  }
 }
 .front-page-2 .wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 1rem;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-2 .wrap {
+    margin-right: 0;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 1024px) and (max-width: 900px) {
+  .front-page-2 .wrap {
+    margin-top: 0;
+  }
 }
 .front-page-2 .wrap #text-5 {
   max-width: 60%;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-2 .wrap #text-5 {
+    max-width: 50%;
+  }
+}
+@media (max-width: 900px) {
+  .front-page-2 .wrap #text-5 {
+    max-width: 100%;
+  }
 }
 .front-page-2 .wrap #media_image-2 {
   margin-left: 7rem;
   box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
   border-radius: 3px;
 }
+@media only screen and (max-width: 1024px) {
+  .front-page-2 .wrap #media_image-2 {
+    margin-left: 0;
+    width: 30%;
+  }
+}
+@media (max-width: 900px) {
+  .front-page-2 .wrap #media_image-2 {
+    display: none;
+  }
+}
 .front-page-2 .wrap h4 {
   font-size: 42px;
   color: #006A4E;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-2 .wrap h4 {
+    font-size: 33px;
+  }
+}
+@media (max-width: 900px) {
+  .front-page-2 .wrap h4 {
+    display: none;
+    font-size: 30px;
+  }
 }
 .front-page-2 .wrap h4::before {
   content: "";
@@ -2120,6 +2203,28 @@ blockquote {
   z-index: 1;
   top: 2rem;
   right: 13%;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-2 .wrap h4::before {
+    right: 14%;
+    top: 1.75rem;
+  }
+}
+@media (max-width: 900px) {
+  .front-page-2 .wrap h4::before {
+    width: 10.5%;
+    right: 11%;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .front-page-2 .wrap h4::before {
+    top: 1.5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-2 .wrap p {
+    font-size: 14px;
+  }
 }
 
 /*----------------------------------------------
