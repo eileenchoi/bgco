@@ -2094,10 +2094,16 @@ blockquote {
   background-repeat: no-repeat;
   background-position: 0% 50%;
 }
+@media only screen and (max-width: 1366px) {
+  .front-page-2 {
+    background-size: 65%;
+    background-position: 0% 40%;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .front-page-2 {
     background-size: 65%;
-    background-position: 0% 20%;
+    background-position: 0% 40%;
   }
 }
 @media only screen and (max-width: 783px) {

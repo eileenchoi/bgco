@@ -375,9 +375,14 @@ blockquote {
   background-repeat: no-repeat;
   background-position: 0% 50%;
   
+  @include media (null, $desktop){
+    background-size: 65%;
+    background-position: -23% 40%;
+  }
+
   @include media (null, $tablet-landscape){
     background-size: 65%;
-    background-position: -0% 20%;
+    background-position: -0% 40%;
   }
 
   @include media (null, $wp-admin-bar){
