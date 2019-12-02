@@ -99,13 +99,19 @@ body {
 .widget-area{
   padding: $site-wrapper;
 
-  @include media (null, $wp-admin-bar){
-    padding: 0 3rem;
+  @include media (null, $tablet-landscape){
+    padding: 0rem 2.5rem;
   }
 
-  @include media (null, $phone-landscape){
-    padding: 3rem;
-  }
+  // @include media (null, $wp-admin-bar){
+  //   padding: 0 3rem;
+  // }
+  
+
+  // @include media (null, $phone-landscape){
+  //   padding: 3rem;
+  // }
+
 
   @include media (null, $phone-portrait){
     padding: 1rem;
@@ -114,8 +120,17 @@ body {
 
 .widget-area .wrap{
   margin: $wrapper-margin;
+
+  @include media (null, $phone-landscape){
+    margin: 0rem 0.5rem;
+  }
 }
 
+.widget{
+  @include media (null, $phone-landscape){
+    margin-bottom: 0 !important;
+  }
+}
 /* Headings
 --------------------------------------------- */
 h1, 
@@ -144,7 +159,13 @@ h3 {
 }
 
 h4 {
-	font-size: $h4-size;
+  font-size: $h4-size;
+  @include media (null, $phone-landscape){
+    font-size: 30px;
+  }
+  
+  
+
 }
 
 .entry-content h3,
@@ -262,6 +283,10 @@ blockquote {
 
     @include media(null, $phone-landscape){
       height: unset;
+    }
+
+    @include media (null, $phone-portrait){
+      align-items: center;
     }
     
 
@@ -386,9 +411,21 @@ blockquote {
   }
 
   @include media (null, $wp-admin-bar){
-    background-position: 70% 50%;
+    background-position: -60% 50%;
     background-size: 80%;
   }
+
+  @media (max-width: 700px){
+    background-position: -60% 10%;
+  }
+
+  @include media (null, $phone-portrait){
+    margin: 8rem 0 0 0;
+    background-position: 58% 0;
+    background-size: 140%;
+  }
+
+  
 
     .about-responsive img{
       display: none;
@@ -401,6 +438,17 @@ blockquote {
         float: right;
         max-width: 30%;
       }
+
+      @include media (null, $phone-landscape){
+       position: relative;
+       top: 1.5rem;
+      }
+
+      @include media (null, $phone-portrait){
+        top: 0;
+        margin: 45px 10px 0 0px;
+      }
+      
     }
 
     #fp2-responsive{
@@ -411,9 +459,11 @@ blockquote {
       }
       @include media (null, $wp-admin-bar){
         position: relative;
-        left: 3rem;
+        left: 2rem;
         
       }
+
+      
 
     }
 
@@ -469,6 +519,7 @@ blockquote {
             display: none;
             font-size: 30px;
           }
+          
         }
 
         h4::before{
@@ -487,11 +538,21 @@ blockquote {
             top: 1.5rem;
           }
 
+          @include media (null, $phone-landscape){
+            width: 8.5%;
+            length: 9%;
+          }
+
         }
 
        p{
         @include media (null, $tablet-landscape){
           font-size: 14px;
+          
+        }
+
+        @include media (null, $phone-landscape){
+          font-size: 12px;
           
         }
        }
@@ -535,14 +596,26 @@ blockquote {
       @include auto-center;
       flex-wrap: wrap;
 
+      @include media (null, $phone-landscape){
+        margin: 0;
+      }
       
     }
     section{
-      width: calc(33.33% - 5rem);
+      width: calc(50% - 5rem);
       padding: 2.5rem;
       margin: 2.5rem;
       box-shadow: $box-shadow;
       border-radius: $border-radius;
+
+      @include media (null, $tablet-landscape){
+        width: calc(100% - 5rem);
+      }
+
+      @include media (null, $phone-landscape){
+        width: calc(100% - 0rem);
+        margin: 1.5rem 0;
+      }
 
   
       
@@ -569,28 +642,64 @@ blockquote {
 ----------------------------------------------*/
 
 .front-page-5{
-  padding: $site-wrapper;
+ 
   display: flex;
-  margin: 4rem 0 0 0;
+  margin: 4rem 0;
   background-image: linear-gradient(rgba(246, 246, 246, 0.9), rgba(246, 246, 246, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
-  
+
+  @include media (null, $tablet-landscape){
+    text-align: center;
+    
+    
+  }
 
     .wrap{
       display: flex;
-      margin-left: 1rem;
+      padding-right: 1rem;
+      align-items: center;
+
+      @include media (null, $tablet-landscape){
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        
+      }
 
       section{
         width: calc(50% - 2rem);
         display: flex;
         justify-content: center;
         padding: 2rem;
+
+        @include media (null, $tablet-landscape){
+          width: calc(100% - 0rem);
+          padding: 0;
+          
+        }
+
         
 
           .widget-wrap{
             margin-left: 1rem;
+            @include media (null, $tablet-landscape){
+              margin-left: 0;
+              
+            }
+          }
+
+
+          p{
+            padding-right: 2.5rem;
+            @include media (null, $tablet-landscape){
+              padding: 0;
+            }
+
+            @include media (null, $phone-landscape){
+              margin-bottom: 2rem;
+            }
           }
 
           h4{
@@ -598,9 +707,21 @@ blockquote {
           }
 
           h4::before{
-            @include before-title;
-            left: 38% !important;
-            right: 0 !important;
+            content:'';
+            position:relative;
+            display:block;
+            height: 2px;
+            width: 7rem;
+            background:$Gold;
+            z-index:1;
+            top: 3.5rem;
+            
+            @include media (null, $tablet-landscape){
+             right: 0;
+             margin: 0 auto;
+             width: 20%;
+              
+            }
           }
       }
     }
@@ -638,10 +759,17 @@ blockquote {
 form{
   display: flex;
   max-width: 540px;
+  min-width: 540px;
   justify-content: center;
   padding: 20px;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
+  margin-left: 1.5rem;
+
+  @include media (null, $tablet-landscape){
+    margin: 0 auto;
+     
+   }
 
 
     p{
@@ -653,6 +781,8 @@ form{
       border-color: $Gold;
       padding: 10px 120px 10px 10px;
       font-size: 14px;
+
+
     }
     
     label{

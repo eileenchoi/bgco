@@ -279,10 +279,15 @@ textarea {
 	width: 100%;
 }
 
+textarea{
+	min-width: 490px;
+}
+
 input:focus,
 textarea:focus {
 	border: 1px solid #999;
 	outline: none;
+	
 }
 
 input[type="checkbox"],

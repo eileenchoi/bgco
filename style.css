@@ -413,6 +413,10 @@ textarea {
   width: 100%;
 }
 
+textarea {
+  min-width: 490px;
+}
+
 input:focus,
 textarea:focus {
   border: 1px solid #999;
@@ -1816,14 +1820,9 @@ body {
 .widget-area {
   padding: 0 6rem 6rem 6rem;
 }
-@media only screen and (max-width: 783px) {
+@media only screen and (max-width: 1024px) {
   .widget-area {
-    padding: 0 3rem;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .widget-area {
-    padding: 3rem;
+    padding: 0rem 1.5rem;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -1834,6 +1833,17 @@ body {
 
 .widget-area .wrap {
   margin: 4rem 1rem 0 0;
+}
+@media only screen and (max-width: 640px) {
+  .widget-area .wrap {
+    margin: 0rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .widget {
+    margin-bottom: 0 !important;
+  }
 }
 
 /* Headings
@@ -1864,6 +1874,11 @@ h3 {
 
 h4 {
   font-size: 24px;
+}
+@media only screen and (max-width: 640px) {
+  h4 {
+    font-size: 30px;
+  }
 }
 
 .entry-content h3,
@@ -1983,6 +1998,11 @@ blockquote {
     height: unset;
   }
 }
+@media only screen and (max-width: 768px) and (max-width: 360px) {
+  .front-page-1 {
+    align-items: center;
+  }
+}
 .front-page-1 .widget-wrap {
   color: #f6f6f6;
   max-width: 680px;
@@ -2097,7 +2117,7 @@ blockquote {
 @media only screen and (max-width: 1366px) {
   .front-page-2 {
     background-size: 65%;
-    background-position: 0% 40%;
+    background-position: -23% 40%;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -2108,8 +2128,20 @@ blockquote {
 }
 @media only screen and (max-width: 783px) {
   .front-page-2 {
-    background-position: 70% 50%;
+    background-position: -60% 50%;
     background-size: 80%;
+  }
+}
+@media (max-width: 700px) {
+  .front-page-2 {
+    background-position: -60% 10%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .front-page-2 {
+    margin: 8rem 0 0 0;
+    background-position: 58% 0;
+    background-size: 140%;
   }
 }
 .front-page-2 .about-responsive img {
@@ -2125,6 +2157,18 @@ blockquote {
     max-width: 30%;
   }
 }
+@media only screen and (max-width: 640px) {
+  .front-page-2 .about-responsive img {
+    position: relative;
+    top: 1.5rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .front-page-2 .about-responsive img {
+    top: 0;
+    margin: 45px 10px 0 0px;
+  }
+}
 .front-page-2 #fp2-responsive {
   display: none;
 }
@@ -2136,7 +2180,7 @@ blockquote {
 @media only screen and (max-width: 783px) {
   .front-page-2 #fp2-responsive {
     position: relative;
-    left: 3rem;
+    left: 2rem;
   }
 }
 .front-page-2 .wrap {
@@ -2227,9 +2271,20 @@ blockquote {
     top: 1.5rem;
   }
 }
+@media only screen and (max-width: 640px) {
+  .front-page-2 .wrap h4::before {
+    width: 8.5%;
+    length: 9%;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .front-page-2 .wrap p {
     font-size: 14px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .front-page-2 .wrap p {
+    font-size: 12px;
   }
 }
 
@@ -2269,12 +2324,28 @@ blockquote {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media only screen and (max-width: 640px) {
+  .front-page-4 .wrap {
+    margin: 0;
+  }
+}
 .front-page-4 section {
-  width: calc(33.33% - 5rem);
+  width: calc(50% - 5rem);
   padding: 2.5rem;
   margin: 2.5rem;
   box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
   border-radius: 3px;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-4 section {
+    width: calc(100% - 5rem);
+  }
+}
+@media only screen and (max-width: 640px) {
+  .front-page-4 section {
+    width: calc(100% - 0rem);
+    margin: 1.5rem 0;
+  }
 }
 .front-page-4 section .widget-wrap {
   display: flex;
@@ -2291,17 +2362,29 @@ blockquote {
 // Contact Us - Front Page 5
 ----------------------------------------------*/
 .front-page-5 {
-  padding: 0 6rem 6rem 6rem;
   display: flex;
-  margin: 4rem 0 0 0;
+  margin: 4rem 0 2rem 0;
   background-image: linear-gradient(rgba(246, 246, 246, 0.9), rgba(246, 246, 246, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
 }
+@media only screen and (max-width: 1024px) {
+  .front-page-5 {
+    text-align: center;
+  }
+}
 .front-page-5 .wrap {
   display: flex;
-  margin-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-5 .wrap {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
 }
 .front-page-5 .wrap section {
   width: calc(50% - 2rem);
@@ -2309,8 +2392,32 @@ blockquote {
   justify-content: center;
   padding: 2rem;
 }
+@media only screen and (max-width: 1024px) {
+  .front-page-5 .wrap section {
+    width: calc(100% - 0rem);
+    padding: 0;
+  }
+}
 .front-page-5 .wrap section .widget-wrap {
   margin-left: 1rem;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-5 .wrap section .widget-wrap {
+    margin-left: 0;
+  }
+}
+.front-page-5 .wrap section p {
+  padding-right: 2.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-5 .wrap section p {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .front-page-5 .wrap section p {
+    margin-bottom: 2rem;
+  }
 }
 .front-page-5 .wrap section h4 {
   font-size: 42px;
@@ -2321,13 +2428,17 @@ blockquote {
   position: relative;
   display: block;
   height: 2px;
-  width: 12.5%;
+  width: 7rem;
   background: #C18734;
   z-index: 1;
-  top: 2rem;
-  right: 13%;
-  left: 38% !important;
-  right: 0 !important;
+  top: 3.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  .front-page-5 .wrap section h4::before {
+    right: 0;
+    margin: 0 auto;
+    width: 20%;
+  }
 }
 
 .form-container input:focus,
@@ -2358,10 +2469,17 @@ blockquote {
 form {
   display: flex;
   max-width: 540px;
+  min-width: 540px;
   justify-content: center;
   padding: 20px;
   box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
   border-radius: 3px;
+  margin-left: 1.5rem;
+}
+@media only screen and (max-width: 1024px) {
+  form {
+    margin: 0 auto;
+  }
 }
 form p {
   margin: 0;
