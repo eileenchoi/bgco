@@ -1,3 +1,65 @@
+/* Footer Widgets
+---------------------------------------------------------------------------- */
+
+.footer-widgets {
+	border-top: 1px solid #eee;
+	background-color: #fff;
+	clear: both;
+  padding: 60px 0;
+  
+  @include media (null, $tablet-landscape){
+    padding: 4rem 0;
+      
+    }
+    @include media (null, $phone-landscape){
+      padding: 2rem ;
+        
+      }
+}
+
+.footer-widgets .wrap {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex; 
+	justify-content: center;
+  align-items: center;
+
+  @include media (null, $tablet-landscape){
+    flex-wrap: wrap;
+     
+   }
+
+  
+}
+
+.footer-widget-area {
+  padding: 0 2rem;
+	margin-bottom: 40px;
+  
+  @include media (null, $desktop){
+    padding: 1.5rem;
+      
+    }
+
+  @include media (null, $tablet-landscape){
+   width: calc(50% - 4rem);
+   margin: 1rem;
+     
+   }
+
+   @include media (null, $wp-admin-bar){
+    width: calc(100% - 0rem);
+    margin: 0;
+    padding: 1rem;
+      
+    }
+
+}
+
+.footer-widget-area:last-child,
+.footer-widgets .widget:last-child {
+	margin-bottom: 0;
+}
 
 
 /*----------------------------------------------
@@ -5,12 +67,33 @@
 ----------------------------------------------*/
 
 .footer-widgets{
-    padding: 4rem 2rem;
+    padding: 4rem;
     background-color: $Navy;
+    border-top: 1px solid #eee;
+    clear: both;
+   
+
+    @include media (null, $phone-landscape){
+    padding: 2rem ;
+      
+    }
   
     h3{
       color: $Gold;
       margin-left: 2rem;
+      font-size: 22px !important;
+
+      @include media (null, $desktop){
+       font-size: 18px !important;
+         
+       }
+
+       @include media (null, $wp-admin-bar){
+        left: 0;
+        font-size: 16px !important;
+          
+        }
+    
     }
     h3:before{
     content: "";
@@ -22,13 +105,24 @@
     z-index: 1;
     top: 15px;
     left: -12%;
+
+    @include media (null, $wp-admin-bar){
+      width: 6.5%;
+      left: -8%;
+      top: 14px;
+        
+      }
     }
+
+    
   }
   
   .footer-widgets{
   
     .footer-widget-area{
-      padding: 0 2rem;
+
+      
+    
   
       a{
         font-size: 14px;
@@ -73,6 +167,11 @@
         }
         p{
           font-size: 14px;
+
+          @include media (null, $wp-admin-bar){
+            font-size: 12px;
+              
+            }
         }
     }
     iframe{
@@ -85,6 +184,11 @@
     .footer-widgets-4{
         padding: 0 1rem !important;
         margin-left: -15px;
+
+        @include media (null, $tablet-landscape){
+          margin-left: 0;
+            
+          }
     }
   
     // Site Footer

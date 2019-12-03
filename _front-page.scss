@@ -100,20 +100,20 @@ body {
   padding: $site-wrapper;
 
   @include media (null, $tablet-landscape){
-    padding: 0rem 2.5rem;
+    padding: 0rem 5rem;
   }
 
-  // @include media (null, $wp-admin-bar){
-  //   padding: 0 3rem;
-  // }
+  @include media (null, $wp-admin-bar){
+    padding: 0 4.5rem;
+  }
   
 
-  // @include media (null, $phone-landscape){
-  //   padding: 3rem;
-  // }
+  @include media (null, $phone-landscape){
+    padding: 2rem;
+  }
 
 
-  @include media (null, $phone-portrait){
+  @media (max-width: 400px){
     padding: 1rem;
   }
 }
@@ -124,6 +124,10 @@ body {
   @include media (null, $phone-landscape){
     margin: 0rem 0.5rem;
   }
+}
+
+.widget-area .wrap:first-of-type{
+  margin: 0;
 }
 
 .widget{
@@ -158,14 +162,11 @@ h3 {
 	font-size: $h3-size;
 }
 
-h4 {
+h4,
+.widget-title {
   font-size: $h4-size;
-  @include media (null, $phone-landscape){
-    font-size: 30px;
-  }
-  
-  
-
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .entry-content h3,
@@ -187,10 +188,18 @@ h6 {
 
 /* Titles
 --------------------------------------------- */
-.widget-title {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 20px;
+h4, 
+.widgettitle{
+  color: #006A4E;
+  font-size: 42px;
+  
+  @media (max-width: 900px){
+    font-size: 38px;
+  }
+  
+  @include media (null, $phone-landscape){
+    font-size: 30px;
+  }
 }
 
 /* Typography
@@ -202,7 +211,15 @@ ol,
 ul,
 li,
 button{
-  font-size: $text-size;
+  font-size: 15px;
+
+  @include media (null, $phone-landscape){
+    font-size: 14px;
+  }
+
+  @include media (null, $phone-portrait){
+    font-size: 12.5px;
+  }
 }
 
 a {
@@ -219,7 +236,7 @@ a:hover {
 
 p {
 	margin: 0 0 30px;
-	padding: 0;
+  padding: 0;
 }
 
 ol,
@@ -401,8 +418,8 @@ blockquote {
   background-position: 0% 50%;
   
   @include media (null, $desktop){
-    background-size: 65%;
-    background-position: -23% 40%;
+    background-size: 50%;
+    background-position: -13% 40%;
   }
 
   @include media (null, $tablet-landscape){
@@ -456,6 +473,9 @@ blockquote {
 
       @media(max-width: 900px){
         display: block;
+        font-size: 38px;
+        position: relative;
+        left: 3rem;
       }
       @include media (null, $wp-admin-bar){
         position: relative;
@@ -463,8 +483,17 @@ blockquote {
         
       }
 
-      
+      @include media (null, $phone-landscape){
+        font-size: 30px;
+        
+      }
+    }
 
+    #fp2-responsive::before{
+        @media(max-width: 900px){
+          width: 7.5% !important;
+          right: 7.5% !important; 
+        }
     }
 
     .wrap {
@@ -510,14 +539,10 @@ blockquote {
 
         h4{
           @include widget-title;
-          
-          @include media (null, $tablet-landscape){
-            font-size: 33px;
-          }
 
           @media(max-width: 900px){
             display: none;
-            font-size: 30px;
+           
           }
           
         }
@@ -545,17 +570,12 @@ blockquote {
 
         }
 
-       p{
-        @include media (null, $tablet-landscape){
-          font-size: 14px;
-          
-        }
 
         @include media (null, $phone-landscape){
           font-size: 12px;
           
         }
-       }
+       
     }
 }
 
@@ -581,12 +601,10 @@ blockquote {
     }
   }
 
-  .widgettitle{
-    @include widget-title;
-    margin-bottom: 0;
-    
+  // .widgettitle{
+  //   @include widget-title;
 
-  }
+  // }
 
 }
 
@@ -626,6 +644,11 @@ blockquote {
             .widget-title{
               margin: 0 0 20px 0;
               color: $Gold;
+              font-size: 23px;
+
+              @include media (null, $wp-admin-bar){
+                font-size: 18px;
+              }
 
             }
 
@@ -650,8 +673,14 @@ blockquote {
   background-repeat: no-repeat;
   background-position: 0% 50%;
 
+  
+
   @include media (null, $tablet-landscape){
-    text-align: center;
+    text-align: center; 
+  }
+
+  @include media (null, $phone-landscape){
+    display: block;
     
     
   }
@@ -660,6 +689,7 @@ blockquote {
       display: flex;
       padding-right: 1rem;
       align-items: center;
+      justify-content: space-between;
 
       @include media (null, $tablet-landscape){
         flex-direction: column;
@@ -677,13 +707,17 @@ blockquote {
         @include media (null, $tablet-landscape){
           width: calc(100% - 0rem);
           padding: 0;
+
+          p{
+            margin: 0;
+          }
           
         }
 
         
 
           .widget-wrap{
-            margin-left: 1rem;
+        
             @include media (null, $tablet-landscape){
               margin-left: 0;
               
@@ -691,19 +725,11 @@ blockquote {
           }
 
 
-          p{
-            padding-right: 2.5rem;
-            @include media (null, $tablet-landscape){
-              padding: 0;
-            }
-
-            @include media (null, $phone-landscape){
-              margin-bottom: 2rem;
-            }
-          }
+        
 
           h4{
             @include widget-title;
+            margin-top: 0;
           }
 
           h4::before{
@@ -730,6 +756,7 @@ blockquote {
 
 .form-container{
 
+  
   input:focus,
   input:active,
   input:hover,
@@ -756,21 +783,33 @@ blockquote {
       transition: 0.3s ease-in-out;
     }
 }
+
+
 form{
   display: flex;
-  max-width: 540px;
-  min-width: 540px;
+  max-width: 100%;
   justify-content: center;
   padding: 20px;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
-  margin-left: 1.5rem;
+  margin: 2rem 0 0 0;
+
+  @include media ($desktop, null){
+    max-width: 550px;
+  }
+
+
+  .message{
+    margin-bottom: 10px;
+  }
+  .form-container{
+    max-width: 100%;
+  }
 
   @include media (null, $tablet-landscape){
-    margin: 0 auto;
+    margin: 2rem 0 0 0;
      
    }
-
 
     p{
       margin: 0;
@@ -779,13 +818,24 @@ form{
     input, 
     textarea{
       border-color: $Gold;
-      padding: 10px 120px 10px 10px;
+      padding: 10px 40px 10px 10px;
       font-size: 14px;
+      
+      // @include media (null, $desktop){
+      //   padding: 10px 40px 10px 10px;
+        
+      // }
+    }
 
+    .textarea{
+      max-width: 100%;
+      min-width: 100%;
 
+      
     }
     
     label{
+      width: 100%;
       margin: 5px;
       border-radius: $border-radius;
         ::placeholder{

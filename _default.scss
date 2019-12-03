@@ -279,9 +279,7 @@ textarea {
 	width: 100%;
 }
 
-textarea{
-	min-width: 490px;
-}
+
 
 input:focus,
 textarea:focus {
@@ -1298,31 +1296,6 @@ p.entry-meta {
 	margin-bottom: 20px;
 }
 
-/* Footer Widgets
----------------------------------------------------------------------------- */
-
-.footer-widgets {
-	border-top: 1px solid #eee;
-	background-color: #fff;
-	clear: both;
-	padding: 60px 0;
-}
-
-.footer-widgets .wrap {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.footer-widget-area {
-	margin-bottom: 40px;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.footer-widget-area:last-child,
-.footer-widgets .widget:last-child {
-	margin-bottom: 0;
-}
 
 
 

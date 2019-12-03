@@ -22,19 +22,11 @@ $h5-size: 20px;
 $h6-size: 18px;
 $h7-size: 16px;
 
-$text-size: 15px;
-
-$widget-title: 42px;
-
 $letter-spacing: 1.38px;
 
 // Layout - see front-page for responsive site wrappers
-$site-wrapper: 0 6rem 6rem 6rem;
-$wrapper-margin: 4rem 1rem 0 0;
-
-
-
-
+$site-wrapper: 0 6rem;
+$wrapper-margin: 0 0 4rem 0;
 
 // Styles
 
@@ -43,10 +35,6 @@ $box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
 
 
 // For Media Queries
-
-
-
-// $wp-admin-bar 783px
 
 $h2-wp-admin-bar: 25px;
 

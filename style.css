@@ -413,10 +413,6 @@ textarea {
   width: 100%;
 }
 
-textarea {
-  min-width: 490px;
-}
-
 input:focus,
 textarea:focus {
   border: 1px solid #999;
@@ -1388,31 +1384,6 @@ p.entry-meta {
   margin-bottom: 20px;
 }
 
-/* Footer Widgets
----------------------------------------------------------------------------- */
-.footer-widgets {
-  border-top: 1px solid #eee;
-  background-color: #fff;
-  clear: both;
-  padding: 60px 0;
-}
-
-.footer-widgets .wrap {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.footer-widget-area {
-  margin-bottom: 40px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.footer-widget-area:last-child,
-.footer-widgets .widget:last-child {
-  margin-bottom: 0;
-}
-
 /* Media Queries
 ---------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) {
@@ -1818,26 +1789,40 @@ body {
 }
 
 .widget-area {
-  padding: 0 6rem 6rem 6rem;
+  padding: 0 6rem;
 }
 @media only screen and (max-width: 1024px) {
   .widget-area {
-    padding: 0rem 1.5rem;
+    padding: 0rem 5rem;
   }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 783px) {
+  .widget-area {
+    padding: 0 4.5rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .widget-area {
+    padding: 2rem;
+  }
+}
+@media (max-width: 400px) {
   .widget-area {
     padding: 1rem;
   }
 }
 
 .widget-area .wrap {
-  margin: 4rem 1rem 0 0;
+  margin: 0 0 4rem 0;
 }
 @media only screen and (max-width: 640px) {
   .widget-area .wrap {
     margin: 0rem 0.5rem;
   }
+}
+
+.widget-area .wrap:first-of-type {
+  margin: 0;
 }
 
 @media only screen and (max-width: 640px) {
@@ -1872,13 +1857,11 @@ h3 {
   font-size: 27px;
 }
 
-h4 {
+h4,
+.widget-title {
   font-size: 24px;
-}
-@media only screen and (max-width: 640px) {
-  h4 {
-    font-size: 30px;
-  }
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .entry-content h3,
@@ -1900,10 +1883,22 @@ h6 {
 
 /* Titles
 --------------------------------------------- */
-.widget-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 20px;
+h4,
+.widgettitle {
+  color: #006A4E;
+  font-size: 42px;
+}
+@media (max-width: 900px) {
+  h4,
+.widgettitle {
+    font-size: 38px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  h4,
+.widgettitle {
+    font-size: 30px;
+  }
 }
 
 /* Typography
@@ -1915,6 +1910,26 @@ ul,
 li,
 button {
   font-size: 15px;
+}
+@media only screen and (max-width: 640px) {
+  p,
+a,
+ol,
+ul,
+li,
+button {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  p,
+a,
+ol,
+ul,
+li,
+button {
+    font-size: 12.5px;
+  }
 }
 
 a {
@@ -2116,8 +2131,8 @@ blockquote {
 }
 @media only screen and (max-width: 1366px) {
   .front-page-2 {
-    background-size: 65%;
-    background-position: -23% 40%;
+    background-size: 50%;
+    background-position: -13% 40%;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -2175,12 +2190,26 @@ blockquote {
 @media (max-width: 900px) {
   .front-page-2 #fp2-responsive {
     display: block;
+    font-size: 38px;
+    position: relative;
+    left: 3rem;
   }
 }
 @media only screen and (max-width: 783px) {
   .front-page-2 #fp2-responsive {
     position: relative;
     left: 2rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .front-page-2 #fp2-responsive {
+    font-size: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .front-page-2 #fp2-responsive::before {
+    width: 7.5% !important;
+    right: 7.5% !important;
   }
 }
 .front-page-2 .wrap {
@@ -2232,15 +2261,9 @@ blockquote {
   font-size: 42px;
   color: #006A4E;
 }
-@media only screen and (max-width: 1024px) {
-  .front-page-2 .wrap h4 {
-    font-size: 33px;
-  }
-}
 @media (max-width: 900px) {
   .front-page-2 .wrap h4 {
     display: none;
-    font-size: 30px;
   }
 }
 .front-page-2 .wrap h4::before {
@@ -2277,13 +2300,8 @@ blockquote {
     length: 9%;
   }
 }
-@media only screen and (max-width: 1024px) {
-  .front-page-2 .wrap p {
-    font-size: 14px;
-  }
-}
 @media only screen and (max-width: 640px) {
-  .front-page-2 .wrap p {
+  .front-page-2 .wrap {
     font-size: 12px;
   }
 }
@@ -2311,11 +2329,6 @@ blockquote {
   right: 0;
   margin: 0 auto;
   width: 50%;
-}
-.front-page-3 .widgettitle {
-  font-size: 42px;
-  color: #006A4E;
-  margin-bottom: 0;
 }
 
 .front-page-4 .wrap {
@@ -2356,6 +2369,12 @@ blockquote {
 .front-page-4 section .widget-wrap .widget-title {
   margin: 0 0 20px 0;
   color: #C18734;
+  font-size: 23px;
+}
+@media only screen and (max-width: 783px) {
+  .front-page-4 section .widget-wrap .widget-title {
+    font-size: 18px;
+  }
 }
 
 /*----------------------------------------------
@@ -2363,7 +2382,7 @@ blockquote {
 ----------------------------------------------*/
 .front-page-5 {
   display: flex;
-  margin: 4rem 0 2rem 0;
+  margin: 4rem 0;
   background-image: linear-gradient(rgba(246, 246, 246, 0.9), rgba(246, 246, 246, 0.8)), url(/wp-content/uploads/2019/10/justice-scale.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -2374,10 +2393,16 @@ blockquote {
     text-align: center;
   }
 }
+@media only screen and (max-width: 640px) {
+  .front-page-5 {
+    display: block;
+  }
+}
 .front-page-5 .wrap {
   display: flex;
   padding-right: 1rem;
   align-items: center;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 1024px) {
   .front-page-5 .wrap {
@@ -2397,31 +2422,19 @@ blockquote {
     width: calc(100% - 0rem);
     padding: 0;
   }
-}
-.front-page-5 .wrap section .widget-wrap {
-  margin-left: 1rem;
+  .front-page-5 .wrap section p {
+    margin: 0;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .front-page-5 .wrap section .widget-wrap {
     margin-left: 0;
   }
 }
-.front-page-5 .wrap section p {
-  padding-right: 2.5rem;
-}
-@media only screen and (max-width: 1024px) {
-  .front-page-5 .wrap section p {
-    padding: 0;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .front-page-5 .wrap section p {
-    margin-bottom: 2rem;
-  }
-}
 .front-page-5 .wrap section h4 {
   font-size: 42px;
   color: #006A4E;
+  margin-top: 0;
 }
 .front-page-5 .wrap section h4::before {
   content: "";
@@ -2468,17 +2481,27 @@ blockquote {
 
 form {
   display: flex;
-  max-width: 540px;
-  min-width: 540px;
+  max-width: 100%;
   justify-content: center;
   padding: 20px;
   box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
   border-radius: 3px;
-  margin-left: 1.5rem;
+  margin: 2rem 0 0 0;
+}
+@media only screen and (min-width: 1366px) {
+  form {
+    max-width: 550px;
+  }
+}
+form .message {
+  margin-bottom: 10px;
+}
+form .form-container {
+  max-width: 100%;
 }
 @media only screen and (max-width: 1024px) {
   form {
-    margin: 0 auto;
+    margin: 2rem 0 0 0;
   }
 }
 form p {
@@ -2487,10 +2510,15 @@ form p {
 form input,
 form textarea {
   border-color: #C18734;
-  padding: 10px 120px 10px 10px;
+  padding: 10px 40px 10px 10px;
   font-size: 14px;
 }
+form .textarea {
+  max-width: 100%;
+  min-width: 100%;
+}
 form label {
+  width: 100%;
   margin: 5px;
   border-radius: 3px;
 }
@@ -2524,16 +2552,95 @@ form .form-container-2 .message {
   margin: 0 auto;
 }
 
+/* Footer Widgets
+---------------------------------------------------------------------------- */
+.footer-widgets {
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  clear: both;
+  padding: 60px 0;
+}
+@media only screen and (max-width: 1024px) {
+  .footer-widgets {
+    padding: 4rem 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .footer-widgets {
+    padding: 2rem;
+  }
+}
+
+.footer-widgets .wrap {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1024px) {
+  .footer-widgets .wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.footer-widget-area {
+  padding: 0 2rem;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 1366px) {
+  .footer-widget-area {
+    padding: 1.5rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer-widget-area {
+    width: calc(50% - 4rem);
+    margin: 1rem;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .footer-widget-area {
+    width: calc(100% - 0rem);
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+.footer-widget-area:last-child,
+.footer-widgets .widget:last-child {
+  margin-bottom: 0;
+}
+
 /*----------------------------------------------
 // Footer
 ----------------------------------------------*/
 .footer-widgets {
-  padding: 4rem 2rem;
+  padding: 4rem;
   background-color: #173449;
+  border-top: 1px solid #eee;
+  clear: both;
+}
+@media only screen and (max-width: 640px) {
+  .footer-widgets {
+    padding: 2rem;
+  }
 }
 .footer-widgets h3 {
   color: #C18734;
   margin-left: 2rem;
+  font-size: 22px !important;
+}
+@media only screen and (max-width: 1366px) {
+  .footer-widgets h3 {
+    font-size: 18px !important;
+  }
+}
+@media only screen and (max-width: 783px) {
+  .footer-widgets h3 {
+    left: 0;
+    font-size: 16px !important;
+  }
 }
 .footer-widgets h3:before {
   content: "";
@@ -2546,10 +2653,14 @@ form .form-container-2 .message {
   top: 15px;
   left: -12%;
 }
-
-.footer-widgets .footer-widget-area {
-  padding: 0 2rem;
+@media only screen and (max-width: 783px) {
+  .footer-widgets h3:before {
+    width: 6.5%;
+    left: -8%;
+    top: 14px;
+  }
 }
+
 .footer-widgets .footer-widget-area a {
   font-size: 14px;
   text-decoration: none;
@@ -2580,6 +2691,11 @@ form .form-container-2 .message {
 .footer-widgets .footer-widget-area p {
   font-size: 14px;
 }
+@media only screen and (max-width: 783px) {
+  .footer-widgets .footer-widget-area p {
+    font-size: 12px;
+  }
+}
 .footer-widgets iframe {
   box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
   border-radius: 3px;
@@ -2588,6 +2704,11 @@ form .form-container-2 .message {
 .footer-widgets-4 {
   padding: 0 1rem !important;
   margin-left: -15px;
+}
+@media only screen and (max-width: 1024px) {
+  .footer-widgets-4 {
+    margin-left: 0;
+  }
 }
 
 .site-footer {
