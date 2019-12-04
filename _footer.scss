@@ -11,10 +11,15 @@
     padding: 4rem 0;
       
     }
-    @include media (null, $phone-landscape){
-      padding: 2rem ;
-        
-      }
+  @include media (null, $wp-admin-bar){
+    padding: 2rem ;
+      
+    }
+
+  @media(max-width: 700px){
+    padding: 4rem;
+  }
+  
 }
 
 .footer-widgets .wrap {
@@ -26,6 +31,7 @@
 
   @include media (null, $tablet-landscape){
     flex-wrap: wrap;
+    align-items: flex-start;
      
    }
 
@@ -42,17 +48,24 @@
     }
 
   @include media (null, $tablet-landscape){
-   width: calc(50% - 4rem);
+   width: calc(50% - 2rem);
    margin: 1rem;
      
    }
 
    @include media (null, $wp-admin-bar){
-    width: calc(100% - 0rem);
+    // width: calc(100% - 0rem);
     margin: 0;
     padding: 1rem;
       
     }
+
+  @media (max-width: 700px){
+    width: calc(100% - 0rem);
+    margin: 0;
+    padding: 1rem;
+      
+  }
 
 }
 
@@ -81,7 +94,8 @@
     h3{
       color: $Gold;
       margin-left: 2rem;
-      font-size: 22px !important;
+      font-size: 18px !important;
+      letter-spacing: $letter-spacing;
 
       @include media (null, $desktop){
        font-size: 18px !important;
@@ -190,28 +204,64 @@
             
           }
     }
+
+    .footer-widgets-3{
+      @media (max-width: 700px){
+        margin-bottom: 1rem;
+      }
+    }
   
-    // Site Footer
+  /*----------------------------------------------
+// Footer
+----------------------------------------------*/
   
     .site-footer{
+      border: 1px solid orange;
         text-align: center;
-        line-height: 0.8;
+        line-height: 0.5;
         background-color: $Navy;
         border-top: 1px solid $Gold;
         color: $Green;
         padding: 20px;
+  
+        
+        
 
         p{
-            margin-bottom: 0;
+            margin: 0;
             font-size: 12px;
-
+            line-height: 1.25;
+            letter-spacing: 2.38 !important;
+        }
+        a{
+          text-decoration: none;
+          letter-spacing: 2.38px !important;
         }
   
       .wrap{
+
+        @media(max-width: 500px){
+          width: 70%;
+          margin: 0 auto;
+        }
+        
         .site-footer-copy{
+          font-size: 12px;
           display: flex;
           justify-content: center;
-          font-size: 12px;
+          flex-wrap: nowrap;
+
+          p{
+            @media (max-width: 500px){
+              line-height: 1.75;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+       
+        
         }
         
   
@@ -219,7 +269,7 @@
           color: $Gold;
           font-weight: 600;
           font-family: $primary;
-          margin: 0 2px;
+       
         }
       }
       .upply,

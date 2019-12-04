@@ -212,6 +212,7 @@ ul,
 li,
 button{
   font-size: 15px;
+  letter-spacing: $letter-spacing;
 
   @include media (null, $phone-landscape){
     font-size: 14px;
@@ -293,10 +294,15 @@ blockquote {
   display: flex;
   align-items: center;
 
+  @include media(null, $tablet-landscape){
+    height: 50vh;
+  }
+
     @include media(null, $tablet-portrait){
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  
 
     @include media(null, $phone-landscape){
       height: unset;
@@ -324,7 +330,7 @@ blockquote {
         max-width: 330px;
       }
 
-      @include media (null, $phone-portrait){
+      @media(max-width: 420px){
         max-width: 100%;
         color: $Black;
         background: $White;
@@ -338,10 +344,16 @@ blockquote {
       h1{
         @include media (null, $wp-admin-bar){
           font-size: 37px;
+
         }
 
         @include media (null, $phone-landscape){
           font-size: 32px;
+        }
+
+        @media (max-width: 420px){
+          font-size: 28px;
+          margin: 0 0 1.5rem 0;
         }
 
         @include media (null, $phone-portrait){
@@ -364,6 +376,11 @@ blockquote {
           @include media (null, $wp-admin-bar){
             width: 5rem;
           }
+
+          @media (max-width: 425px){
+            top: 37%;
+          }
+
           @media (max-width: 380px){
             top: 35%;
           }
@@ -427,6 +444,10 @@ blockquote {
     background-position: -0% 40%;
   }
 
+  @media(max-width: 420px){
+    margin-top: 8rem;
+  }
+
   @include media (null, $wp-admin-bar){
     background-position: -60% 50%;
     background-size: 80%;
@@ -437,7 +458,7 @@ blockquote {
   }
 
   @include media (null, $phone-portrait){
-    margin: 8rem 0 0 0;
+    margin: 10rem 0 0 0;
     background-position: 58% 0;
     background-size: 140%;
   }
@@ -449,6 +470,8 @@ blockquote {
       box-shadow: $box-shadow;
       margin: 15px 0px 15px 15px;
       border-radius: $border-radius;
+      position: relative;
+      right: -1rem;
 
       @media(max-width: 900px){
         display: block;
@@ -459,6 +482,13 @@ blockquote {
       @include media (null, $phone-landscape){
        position: relative;
        top: 1.5rem;
+      }
+
+      @media (max-width: 500px){
+        top: 0;
+        max-width: 30%;
+        position: relative;
+        margin: 3rem 0.5rem;
       }
 
       @include media (null, $phone-portrait){
