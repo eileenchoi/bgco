@@ -27,7 +27,7 @@
 	margin-right: auto;
 	display: flex; 
 	justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
   @include media (null, $tablet-landscape){
     flex-wrap: wrap;
@@ -216,7 +216,6 @@
 ----------------------------------------------*/
   
     .site-footer{
-      border: 1px solid orange;
         text-align: center;
         line-height: 0.5;
         background-color: $Navy;
