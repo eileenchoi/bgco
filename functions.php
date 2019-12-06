@@ -230,11 +230,7 @@ function smooth_enqueue_script() {
 }
 add_action( 'wp_enqueue_scripts', 'smooth_enqueue_script' );
 
-// Enqueue random background on load
-function background_script() {
-    wp_enqueue_script( 'background', get_stylesheet_directory_uri() . '/js/background.js', array( 'jquery' ), '', true );
-}
-add_action( 'wp_enqueue_scripts', 'background_script' );
+
 
 
 //* Customize the site footer

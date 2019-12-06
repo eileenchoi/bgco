@@ -1422,7 +1422,7 @@ p.entry-meta {
   /* Responsive Menu
   --------------------------------------------- */
   .genesis-responsive-menu {
-    display: block;
+    display: none;
     padding-top: 15px;
   }
 
@@ -1796,6 +1796,7 @@ ul {
 // Media Query Breakpoints
 ----------------------------------------------*/
 body {
+  scroll-behavior: smooth;
   font-family: "Nanum Gothic", sans-serif;
   background-color: #f6f6f6;
   color: #173449;

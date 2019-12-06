@@ -84,6 +84,7 @@ $phone-portrait: 360px;
 //--------------------------------------------------------------
 
 body {
+  scroll-behavior: smooth;
   font-family: $secondary; 
 	background-color: $White;
 	color: $Navy;

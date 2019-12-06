@@ -8,7 +8,9 @@ jQuery(function ($) {
 
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top -475
-        },1100, 'swing');
+        },800, 'swing');
+
+        return false;
 
     });
     
