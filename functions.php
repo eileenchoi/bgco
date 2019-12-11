@@ -230,6 +230,13 @@ function smooth_enqueue_script() {
 }
 add_action( 'wp_enqueue_scripts', 'smooth_enqueue_script' );
 
+// enqueues rotating background image front page 1
+
+function randomImg() {
+    wp_enqueue_script( 'background', get_stylesheet_directory_uri() . '/js/background.js', array( 'jquery' ), '', true );
+}
+add_action( 'wp_enqueue_scripts', 'randomImg' );
+
 
 
 

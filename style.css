@@ -2013,7 +2013,7 @@ blockquote {
 // Header Hero Styles - Front Page 1
 ----------------------------------------------*/
 .front-page-1 {
-  background-image: url("/wp-content/uploads/2019/10/giammarco-boscaro-eWpBNXRHfTI-unsplash.jpg");
+  background: no-repeat;
   background-size: cover;
   background-position: 50% 10%;
   width: 100vw;
@@ -2095,44 +2095,44 @@ blockquote {
     margin: 0 0 0.67em 0;
   }
 }
-.front-page-1 .widget-wrap h1:before {
+.front-page-1 .widget-wrap h1:after {
   content: "";
   position: absolute;
   display: block;
-  top: 40%;
   height: 2px;
   width: 9rem;
   background: #C18734;
   z-index: 1;
+  margin-top: 5px;
 }
 @media only screen and (max-width: 783px) {
-  .front-page-1 .widget-wrap h1:before {
+  .front-page-1 .widget-wrap h1:after {
     width: 5rem;
   }
 }
 @media (max-width: 425px) {
-  .front-page-1 .widget-wrap h1:before {
+  .front-page-1 .widget-wrap h1:after {
     top: 37%;
   }
 }
 @media (max-width: 380px) {
-  .front-page-1 .widget-wrap h1:before {
+  .front-page-1 .widget-wrap h1:after {
     top: 35%;
   }
 }
 @media only screen and (max-width: 360px) {
-  .front-page-1 .widget-wrap h1:before {
+  .front-page-1 .widget-wrap h1:after {
     width: 4.5rem;
     top: 38%;
   }
 }
 @media (max-width: 325px) {
-  .front-page-1 .widget-wrap h1:before {
+  .front-page-1 .widget-wrap h1:after {
     top: 35%;
   }
 }
 @media (max-width: 300px) {
-  .front-page-1 .widget-wrap h1:before {
+  .front-page-1 .widget-wrap h1:after {
     top: 32%;
   }
 }
