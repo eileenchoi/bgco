@@ -763,7 +763,7 @@ blockquote {
             margin-top: 0;
           }
 
-          h4::before{
+          h4::after{
             content:'';
             position:relative;
             display:block;
@@ -771,7 +771,7 @@ blockquote {
             width: 7rem;
             background:$Gold;
             z-index:1;
-            top: 3.5rem;
+           
             
             @include media (null, $tablet-landscape){
              right: 0;

@@ -13,9 +13,8 @@ function randomImage(){
     ];
     var size = images.length;
     var x = Math.floor(size * Math.random());
-    console.log(x);
+    // console.log(x);
     var element = document.getElementsByClassName('front-page-1');
-    console.log("bg working");
 
     element[0].style["background-image"] = "url("+ images[x] + ")";
     

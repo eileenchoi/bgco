@@ -1110,9 +1110,8 @@ img.alignright,
   margin-right: 5px;
   position: relative;
   text-rendering: auto;
-  top: 1px;
+  top: 1.8px;
   line-height: 0.8;
-  font-family: "BigCaslonMedium";
 }
 
 .sub-menu-toggle {
@@ -1442,6 +1441,7 @@ p.entry-meta {
     clear: none;
     float: right;
     width: auto;
+    display: block;
   }
 
   .nav-primary .genesis-nav-menu a {
@@ -2488,7 +2488,7 @@ blockquote {
   color: #006A4E;
   margin-top: 0;
 }
-.front-page-5 .wrap section h4::before {
+.front-page-5 .wrap section h4::after {
   content: "";
   position: relative;
   display: block;
@@ -2496,10 +2496,9 @@ blockquote {
   width: 7rem;
   background: #C18734;
   z-index: 1;
-  top: 3.5rem;
 }
 @media only screen and (max-width: 1024px) {
-  .front-page-5 .wrap section h4::before {
+  .front-page-5 .wrap section h4::after {
     right: 0;
     margin: 0 auto;
     width: 20%;

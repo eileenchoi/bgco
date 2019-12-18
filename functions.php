@@ -223,6 +223,7 @@ for ( $i = 1; $i <= 5; $i++ ) {
     );
 }
 
+// --------- ENQUEUE JS FILES ------ 
 // enqueues smooth.js
 
 function smooth_enqueue_script() {
@@ -236,6 +237,12 @@ function randomImg() {
     wp_enqueue_script( 'background', get_stylesheet_directory_uri() . '/js/background.js', array( 'jquery' ), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'randomImg' );
+
+// enqueues menuclick.js
+function menuClick() {
+    wp_enqueue_script( 'menuClick', get_stylesheet_directory_uri() . '/js/menuclick.js', array( 'jquery' ), '', true );
+}
+add_action( 'wp_enqueue_scripts', 'menuClick' );
 
 
 

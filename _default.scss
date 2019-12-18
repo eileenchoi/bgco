@@ -1013,9 +1013,9 @@ img.alignright,
 	margin-right: 5px;
 	position: relative;
 	text-rendering: auto;
-	top: 1px;
+	top: 1.8px;
 	line-height: 0.8;
-	font-family: $primary;
+	
 	
 }
 
@@ -1051,6 +1051,7 @@ img.alignright,
 	padding-bottom: 15px;
 	padding-top: 15px;
 	width: 100%;
+	
 }
 
 /* Footer Menu
@@ -1374,6 +1375,7 @@ p.entry-meta {
 		clear: none;
 		float: right;
 		width: auto;
+		display: block;
 		
 	}
 
