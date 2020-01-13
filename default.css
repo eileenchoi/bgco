@@ -1153,8 +1153,9 @@ img.alignright,
 	z-index: 1000;
 }
 
-.menu-toggle.activated::before {
-	content: "\f335";
+
+.menu-toggle:not(.activated)::before{
+  content: ""\f333""
 }
 
 .site-header .menu-toggle::before {

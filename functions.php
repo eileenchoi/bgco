@@ -62,6 +62,29 @@ if ( function_exists( 'genesis_register_responsive_menus' ) ) {
 }
 
 add_action( 'wp_enqueue_scripts', 'genesis_sample_enqueue_scripts_styles' );
+
+// Stops flashing responsive menu
+add_filter( 'body_class', function ( $classes ) {
+	$classes[] = 'no-js';
+	return $classes;
+} );
+
+add_action( 'genesis_before', function () {
+	?>
+    <script>
+        //<![CDATA[
+        (function () {
+            var c = document.body.classList;
+            c.remove('no-js');
+            c.add('js');
+        })();
+        //]]>
+    </script>
+	<?php
+}, 1 );
+
+// ---- end
+
 /**
  * Enqueues scripts and styles.
  *

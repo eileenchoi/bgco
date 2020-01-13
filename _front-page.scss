@@ -138,7 +138,10 @@ body {
 }
 /* Headings
 --------------------------------------------- */
-h1, 
+h1{
+  letter-spacing: 3.5px !important;
+} 
+h1,
 h2,
 h3,
 h4,
@@ -248,7 +251,8 @@ ul {
 }
 
 li {
-	list-style-type: none;
+  list-style-type: none;
+  display: none;
 }
 
 hr {
@@ -296,7 +300,7 @@ blockquote {
   align-items: center;
 
   @include media(null, $tablet-landscape){
-    height: 50vh;
+    height: 75vh;
   }
 
     @include media(null, $tablet-portrait){
@@ -379,25 +383,18 @@ blockquote {
           }
 
           @media (max-width: 425px){
-            top: 37%;
-          }
-
-          @media (max-width: 380px){
-            top: 35%;
-          }
-
-          @include media (null, $phone-portrait){
-            width: 4.5rem;
-            top: 38%;
+            top: 33%;
           }
 
           @media (max-width: 325px){
-            top: 35%;
+            width: 4rem;
           }
 
           @media (max-width: 300px){
-            top: 32%;
+            top: 29%;
           }
+
+       
       }
 
       .hero-copy{

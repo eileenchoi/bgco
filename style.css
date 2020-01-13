@@ -1727,6 +1727,11 @@ ul {
   }
 }
 
+@media (max-width: 960px) {
+  body.js .genesis-responsive-menu {
+    display: none;
+  }
+}
 /* Title Area
 --------------------------------------------- */
 .title-area {
@@ -1853,6 +1858,10 @@ body {
 
 /* Headings
 --------------------------------------------- */
+h1 {
+  letter-spacing: 3.5px !important;
+}
+
 h1,
 h2,
 h3,
@@ -1862,7 +1871,7 @@ h5 {
   font-weight: 600;
   padding: 0;
   line-height: 1.38;
-  letter-spacing: 1.38px;
+  letter-spacing: 1.58px;
 }
 
 h1 {
@@ -1930,7 +1939,7 @@ ul,
 li,
 button {
   font-size: 15px;
-  letter-spacing: 1.38px;
+  letter-spacing: 1.58px;
 }
 @media only screen and (max-width: 640px) {
   p,
@@ -1978,6 +1987,7 @@ ul {
 
 li {
   list-style-type: none;
+  display: none;
 }
 
 hr {
@@ -2024,7 +2034,7 @@ blockquote {
 }
 @media only screen and (max-width: 1024px) {
   .front-page-1 {
-    height: 50vh;
+    height: 75vh;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -2112,28 +2122,17 @@ blockquote {
 }
 @media (max-width: 425px) {
   .front-page-1 .widget-wrap h1:after {
-    top: 37%;
-  }
-}
-@media (max-width: 380px) {
-  .front-page-1 .widget-wrap h1:after {
-    top: 35%;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .front-page-1 .widget-wrap h1:after {
-    width: 4.5rem;
-    top: 38%;
+    top: 33%;
   }
 }
 @media (max-width: 325px) {
   .front-page-1 .widget-wrap h1:after {
-    top: 35%;
+    width: 4rem;
   }
 }
 @media (max-width: 300px) {
   .front-page-1 .widget-wrap h1:after {
-    top: 32%;
+    top: 29%;
   }
 }
 .front-page-1 .widget-wrap .hero-copy {
@@ -2518,7 +2517,7 @@ blockquote {
   font-size: 14px;
   padding: 15px 60px;
   font-weight: 400;
-  letter-spacing: 1.38px;
+  letter-spacing: 1.58px;
   display: block;
   margin: 0 auto;
   border-radius: 3px;
@@ -2693,7 +2692,7 @@ form .form-container-2 .message {
   color: #C18734;
   margin-left: 2rem;
   font-size: 18px !important;
-  letter-spacing: 1.38px;
+  letter-spacing: 1.58px;
 }
 @media only screen and (max-width: 1366px) {
   .footer-widgets h3 {
