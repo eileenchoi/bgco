@@ -56,6 +56,7 @@ $phone-portrait: 360px;
 /* Site Header
 ---------------------------------------------------------------------------- */
 
+
 .site-header {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   padding: 0 30px;
@@ -67,10 +68,11 @@ $phone-portrait: 360px;
 }
 
 @media (max-width: 960px){
-  body.js .genesis-responsive-menu{
-    display: none;
+  
+body.js .nav-primary{
+  display: none;
+}
 
-  }
 
 }
 

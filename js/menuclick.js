@@ -1,3 +1,5 @@
+
+
 // Close menu when link is clicked
 
 jQuery(document).ready(function(){
@@ -8,6 +10,16 @@ jQuery(document).ready(function(){
 
 });
  
+// Close menu when click outside
+
+jQuery('.site-inner').click(function() {
+    
+    jQuery('.genesis-responsive-menu').slideUp('slow');
+    jQuery('.menu-toggle').removeClass('activated');
+    console.log('working');
+    
+});
+
 // Close menu when click on front-page-1 (outside)
 
 // jQuery('.menu-toggle').click(function(e) { 
@@ -32,14 +44,6 @@ jQuery(document).ready(function(){
 //     console.log('working');
     
 // });
-
-jQuery('.site-inner').click(function() {
-    
-    jQuery('.genesis-responsive-menu').slideUp('slow');
-    jQuery('.menu-toggle').removeClass('activated');
-    console.log('working');
-    
-});
 
 
 
