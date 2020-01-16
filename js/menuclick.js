@@ -1,51 +1,54 @@
 
 
-// Close menu when link is clicked
+// Close when link is clicked only in mobile menu
 
-jQuery(document).ready(function(){
-    jQuery('.menu li a').click(function() {
-        jQuery('.genesis-responsive-menu').slideUp('slow');
-        jQuery('.menu-toggle').removeClass('activated');
-    });
+jQuery(document).ready(function() {
+    // run test on initial page load
+    checkSize();
 
-});
- 
-// Close menu when click outside
-
-jQuery('.site-inner').click(function() {
-    
-    jQuery('.genesis-responsive-menu').slideUp('slow');
-    jQuery('.menu-toggle').removeClass('activated');
-    console.log('working');
-    
+    // run test on resize of the window
+    jQuery(window).resize(checkSize);
 });
 
-// Close menu when click on front-page-1 (outside)
+//Function to the css rule
+function checkSize(){
 
-// jQuery('.menu-toggle').click(function(e) { 
-//     e.stopPropagation(); 
-//     console.log('event stopped');
-    
-// }); // This should stop the event when button is clicked
+    if (jQuery(".menu-toggle").css("display") == "block" ){
+            jQuery('.menu li a').click(function() {
+            jQuery('.genesis-responsive-menu').slideUp('slow');
+            jQuery('.menu-toggle').removeClass('activated');
+        });
+       
+    } else {
+        return;
+    }
+}
 
-// jQuery('.menu-toggle.activated') && jQuery(document).click(function() {
-    
 
-//         jQuery('.genesis-responsive-menu').slideUp('slow');
-//         jQuery('.menu-toggle').removeClass('activated');
-//         console.log('working');
+// Close menu if anywhere in site-header (anywhere in body) is clicked, only in mobile menu
+
+jQuery(document).ready(function() {
+    // run test on initial page load
+    checkSizeTwo();
+
+    // run test on resize of the window
+    jQuery(window).resize(checkSizeTwo);
+});
+
+//Function to the css rule
+function checkSizeTwo(){
+
+    if (jQuery(".menu-toggle").css("display") == "block" ){
         
-// });
-
-// jQuery('.menu-toggle.activated') && jQuery('.site-inner').click(function() {
-    
-//     jQuery('.genesis-responsive-menu').slideUp('slow');
-//     jQuery('.menu-toggle').removeClass('activated');
-//     console.log('working');
-    
-// });
-
-
-
-
-
+        jQuery('.site-inner').click(function() {
+            jQuery('.genesis-responsive-menu').slideUp('slow');
+            jQuery('.menu-toggle').removeClass('activated');
+            console.log('two working');
+            
+        });
+       
+    } else {
+        console.log("");
+        // These wouldn't work with just 'if' statements, having to statements both with return caused a fatal conflict that causes the functions to fail
+    }
+}
