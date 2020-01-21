@@ -96,8 +96,13 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-
+.site-inner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .widget-area{
+  max-width: 1480px;
   padding: $site-wrapper;
 
   @include media (null, $tablet-landscape){
@@ -284,12 +289,36 @@ blockquote {
 	margin: 30px;
 }
 
+/*----------------------------------------------
+// Cookies Policy Banner
+----------------------------------------------*/
 
+.wpcc-banner{
+  padding: 1em 2.5em !important;
+}
+.wpcc-corners-round .wpcc-btn{
+  border-radius: 2px !important;
+  position: relative !important;
+  right: 1rem !important;
+  text-transform: uppercase !Important;
+}
+.wpcc-btn{
+  padding: 5px 20px !important;
+    
+  a{
+      text-decoration: none !important;
+    }
+}
+.wpcc-privacy {
+  font-size: 12px !Important;
+  
+}
 /*----------------------------------------------
 // Header Hero Styles - Front Page 1
 ----------------------------------------------*/
 
 .front-page-1{
+  max-width: none !important;
   background: no-repeat;
   background-size: cover;
   background-position: 50% 10%;
@@ -321,7 +350,13 @@ blockquote {
 }
  
     .widget-wrap {
-      color: $White;
+      // TEST
+      border-radius: 2px;
+      background: rgba(233, 233, 233, 0.75);
+      color: $Black;
+      padding: 1rem 1.5rem;
+
+      // color: $White;
       max-width: 680px;
       font-family: 'Big Caslon Medium';
       margin-bottom: 0 !important;
@@ -431,6 +466,10 @@ blockquote {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 50%;
+
+    h5{
+      color: $Gold;
+    }
   
   @include media (null, $desktop){
     background-size: 50%;
@@ -815,6 +854,7 @@ blockquote {
 
 form{
   display: flex;
+  flex-direction: column;
   max-width: 100%;
   justify-content: center;
   padding: 20px;
@@ -908,3 +948,15 @@ form{
 }
 
 
+// Form Output
+div.wpcf7-response-output,
+span.wpcf7-not-valid-tip{
+  font-family: $secondary;
+  font-size: 15px !important;
+}
+
+div.wpcf7-validation-errors, 
+div.wpcf7-acceptance-missing{
+  border: 2px solid $Gold !important;
+  
+}
