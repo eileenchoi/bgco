@@ -19,6 +19,11 @@
   @media(max-width: 700px){
     padding: 4rem;
   }
+
+  @include media (null, $phone-landscape){
+    padding: 1rem;
+      
+    }
   
 }
 
@@ -67,6 +72,10 @@
       
   }
 
+  @include media (null, $phone-landscape){
+    padding: 0;
+  }
+
 }
 
 .footer-widget-area:last-child,
@@ -84,6 +93,8 @@
     background-color: $Navy;
     border-top: 1px solid #eee;
     clear: both;
+    position: relative;
+    
    
 
     @include media (null, $phone-landscape){
@@ -132,6 +143,11 @@
   }
   
   .footer-widgets{
+
+
+    .wrap{
+      max-width: 2180px;
+    }
   
     .footer-widget-area{
 
@@ -149,6 +165,12 @@
       }
       p{
           color: $White;
+
+    @include media (null, $phone-landscape){
+      margin: 0;
+      
+    }
+
       }
   
       section{
@@ -173,8 +195,11 @@
           position: relative;
           right: 12px;
           font-size: 25px;
-          color: $Green;}
+          color: $Green;
+          top: -3px;
         }
+        
+      }
   
         .address{
           display: flex;
@@ -214,6 +239,17 @@
     .policy{
       display: flex;
       justify-content: space-between;
+
+    }
+
+    .fax {
+      right: 10px;
+      position: relative;
+      margin-top: 8px;
+      img{
+        width: 22px;
+        margin-right: 10px;
+      }
 
     }
   

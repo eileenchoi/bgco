@@ -65,6 +65,8 @@ $phone-portrait: 360px;
   @include media (null, $phone-portrait){
     padding: 0 10px;
   }
+
+  
 }
 
 @media (max-width: 960px){

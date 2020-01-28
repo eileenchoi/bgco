@@ -89,7 +89,7 @@ body {
 	background-color: $White;
 	color: $Navy;
 	letter-spacing: 1.38px;
-	line-height: 1.625;
+	line-height: $line-height;
 	margin: 0;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -154,7 +154,7 @@ h5{
     font-family: $primary;
     font-weight: 600;
     padding: 0;
-    line-height: 1.38;
+    line-height: $line-height;
     letter-spacing: $letter-spacing;
 }
 
@@ -220,7 +220,7 @@ ol,
 ul,
 li,
 button{
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: $letter-spacing;
 
   @include media (null, $phone-landscape){
@@ -228,7 +228,7 @@ button{
   }
 
   @include media (null, $phone-portrait){
-    font-size: 12.5px;
+    font-size: 14.5px;
   }
 }
 
@@ -247,6 +247,7 @@ a:hover {
 p {
 	margin: 0 0 30px;
   padding: 0;
+  line-height: 1.58;
 }
 
 ol,
@@ -317,19 +318,32 @@ blockquote {
 // Header Hero Styles - Front Page 1
 ----------------------------------------------*/
 
+
+  @media (min-width: 2250px) {
+    .front-page-1 .wrap{
+      max-width: 2180px;
+    margin: 0 auto !important;
+    display: block;
+    width: 100%;
+
+    }
+    
+  }
+
 .front-page-1{
   max-width: none !important;
   background: no-repeat;
   background-size: cover;
   background-position: 50% 10%;
   width: 100vw;
-  height: 90vh;
+  height: 70vh;
   position: relative;
   display: flex;
   align-items: center;
 
+  
   @include media(null, $tablet-landscape){
-    height: 75vh;
+    height: 45vh;
   }
 
     @include media(null, $tablet-portrait){
@@ -350,13 +364,8 @@ blockquote {
 }
  
     .widget-wrap {
-      // TEST
-      border-radius: 2px;
-      background: rgba(233, 233, 233, 0.75);
-      color: $Black;
-      padding: 1rem 1.5rem;
 
-      // color: $White;
+      color: $White;
       max-width: 680px;
       font-family: 'Big Caslon Medium';
       margin-bottom: 0 !important;
@@ -382,6 +391,9 @@ blockquote {
       }
       
       h1{
+        margin: 0 0 2rem 0;
+        line-height: 1.25;
+
         @include media (null, $wp-admin-bar){
           font-size: 37px;
 
@@ -418,7 +430,7 @@ blockquote {
           }
 
           @media (max-width: 425px){
-            top: 33%;
+            top: 48;
           }
 
           @media (max-width: 325px){
@@ -434,6 +446,7 @@ blockquote {
 
       .hero-copy{
         font-size: 22px;
+        line-height: 1.35;
 
         @include media (null, $wp-admin-bar){
           font-size: 18px;
@@ -469,6 +482,7 @@ blockquote {
 
     h5{
       color: $Gold;
+      margin: 0;
     }
   
   @include media (null, $desktop){
@@ -500,6 +514,13 @@ blockquote {
     background-size: 140%;
   }
 
+  h5{
+    @include media (null, $phone-landscape){
+        font-size: 18px;
+        text-align: center;
+    }
+  }
+
   
 
     .about-responsive img{
@@ -514,23 +535,24 @@ blockquote {
         display: block;
         float: right;
         max-width: 30%;
+        margin-top: 6rem;
       }
 
       @include media (null, $phone-landscape){
        position: relative;
-       top: 1.5rem;
+       
       }
 
       @media (max-width: 500px){
         top: 0;
         max-width: 30%;
         position: relative;
-        margin: 3rem 0.5rem;
+        
       }
 
       @include media (null, $phone-portrait){
         top: 0;
-        margin: 45px 10px 0 0px;
+        margin: 115px 10px 0 0px;
       }
       
     }
@@ -644,6 +666,7 @@ blockquote {
         }
        
     }
+
 }
 
 
@@ -655,7 +678,7 @@ blockquote {
 .front-page-3{
   display: flex;
   justify-content: center;
-  padding: 0;
+
   width: 100% !important;
 
   .wrap{
@@ -668,10 +691,6 @@ blockquote {
     }
   }
 
-  // .widgettitle{
-  //   @include widget-title;
-
-  // }
 
 }
 
@@ -700,6 +719,7 @@ blockquote {
       @include media (null, $phone-landscape){
         width: calc(100% - 0rem);
         margin: 1.5rem 0;
+        padding: 1.8rem;
       }
 
   
@@ -748,6 +768,7 @@ blockquote {
 
   @include media (null, $phone-landscape){
     display: block;
+    margin-top: 2rem 0;
     
     
   }
@@ -781,8 +802,6 @@ blockquote {
           
         }
 
-        
-
           .widget-wrap{
         
             @include media (null, $tablet-landscape){
@@ -791,11 +810,8 @@ blockquote {
             }
           }
 
-
-        
-
           h4{
-            @include widget-title;
+            // @include widget-title;
             margin-top: 0;
           }
 
@@ -813,6 +829,7 @@ blockquote {
              right: 0;
              margin: 0 auto;
              width: 20%;
+             
               
             }
           }
@@ -842,6 +859,8 @@ blockquote {
     display: block;
     margin: 0 auto;
     border-radius: $border-radius;
+
+    
   }
   input[type="submit"]:hover,
     input[type="submit"]:active,
@@ -876,7 +895,7 @@ form{
 
   @include media (null, $tablet-landscape){
     margin: 2rem 0 0 0;
-     
+    padding: 10px;
    }
 
     p{
@@ -889,10 +908,15 @@ form{
       padding: 10px 40px 10px 10px;
       font-size: 14px;
       
-      // @include media (null, $desktop){
-      //   padding: 10px 40px 10px 10px;
-        
-      // }
+      @include media (null, $phone-landscape){
+        font-size: 12px;
+      }
+
+      @include media (null, $phone-portrait){
+        font-size: 9px;
+      }
+      
+      
     }
 
     .textarea{
