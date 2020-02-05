@@ -11,6 +11,42 @@ $White: #f6f6f6;
 
 // Typography
 
+// Big Caslon Medium Regular
+@font-face{
+    font-family: "BigCaslonMedium";
+    src: url("/typography/BigCaslonMedium.ttf") format('embedded-opentype'),
+        url("/typography/BigCaslonMedium.ttf") format(truetype);
+    font-weight: 400;
+    font-style: normal;
+}
+// Big Caslon Medium Bold
+@font-face{
+    font-family: "BigCaslonMedium";
+    src: url("/typography/BigCaslonMedium.ttf") format('embedded-opentype'),
+        url("/typography/BigCaslonMedium.ttf") format(truetype);
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Nanum Gothic Regular
+@font-face{
+    font-family: "Nanum Gothic', sans-serif";
+    src: url("/typography/NanumGothic-Regular.ttf") format('embedded-opentype'),
+        url("/typography/NanumGothic-Regular.ttf") format(truetype);
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Nanum Gothic Bold
+@font-face{
+    font-family: "Nanum Gothic', sans-serif";
+    src: url("/typography/NanumGothic-Regular.ttf") format('embedded-opentype'),
+        url("/typography/NanumGothic-Regular.ttf") format(truetype);
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 $primary: "BigCaslonMedium";
 $secondary: 'Nanum Gothic', sans-serif;
 

@@ -1,4 +1,28 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "BigCaslonMedium";
+  src: url("/typography/BigCaslonMedium.ttf") format("embedded-opentype"), url("/typography/BigCaslonMedium.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "BigCaslonMedium";
+  src: url("/typography/BigCaslonMedium.ttf") format("embedded-opentype"), url("/typography/BigCaslonMedium.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nanum Gothic', sans-serif";
+  src: url("/typography/NanumGothic-Regular.ttf") format("embedded-opentype"), url("/typography/NanumGothic-Regular.ttf") format(truetype);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nanum Gothic', sans-serif";
+  src: url("/typography/NanumGothic-Regular.ttf") format("embedded-opentype"), url("/typography/NanumGothic-Regular.ttf") format(truetype);
+  font-weight: 700;
+  font-style: normal;
+}
 /*
 Theme Name: bgco-theme
 Theme URI: https://upply.io
@@ -2029,6 +2053,11 @@ blockquote {
   right: 1rem !important;
   text-transform: uppercase !important;
 }
+@media (max-width: 736px) {
+  .wpcc-corners-round .wpcc-btn {
+    right: 0 !important;
+  }
+}
 
 .wpcc-btn {
   padding: 5px 20px !important;
@@ -2058,15 +2087,10 @@ blockquote {
   background-size: cover;
   background-position: 50% 10%;
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   position: relative;
   display: flex;
   align-items: center;
-}
-@media only screen and (max-width: 1024px) {
-  .front-page-1 {
-    height: 45vh;
-  }
 }
 @media only screen and (max-width: 768px) {
   .front-page-1 {
@@ -2111,7 +2135,7 @@ blockquote {
     padding: 20px;
     box-shadow: 0 0 20px rgba(23, 52, 73, 0.3);
     position: relative;
-    top: 9rem;
+    top: 7rem;
   }
 }
 .front-page-1 .widget-wrap h1 {
@@ -2219,31 +2243,26 @@ blockquote {
 }
 @media (max-width: 420px) {
   .front-page-2 {
-    margin-top: 8rem;
+    margin-top: 6rem;
   }
 }
 @media only screen and (max-width: 783px) {
   .front-page-2 {
-    background-position: -60% 50%;
-    background-size: 80%;
-  }
-}
-@media (max-width: 700px) {
-  .front-page-2 {
-    background-position: -60% 10%;
+    background-position: 60% 50%;
+    background-size: 140%;
   }
 }
 @media only screen and (max-width: 360px) {
   .front-page-2 {
     margin: 10rem 0 0 0;
-    background-position: 58% 0;
-    background-size: 140%;
   }
 }
 @media only screen and (max-width: 640px) {
   .front-page-2 h5 {
     font-size: 18px;
     text-align: center;
+    background-size: 100%;
+    background-position: -50% 50%;
   }
 }
 .front-page-2 .about-responsive img {
@@ -2252,32 +2271,25 @@ blockquote {
   margin: 15px 0px 15px 15px;
   border-radius: 3px;
   position: relative;
-  right: -1rem;
 }
-@media (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .front-page-2 .about-responsive img {
     display: block;
     float: right;
-    max-width: 30%;
-    margin-top: 6rem;
+    max-width: 100%;
+    margin: 2rem 1.25rem;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 640px) {
   .front-page-2 .about-responsive img {
-    position: relative;
-  }
-}
-@media (max-width: 500px) {
-  .front-page-2 .about-responsive img {
-    top: 0;
-    max-width: 30%;
-    position: relative;
+    margin: 1.5rem 1rem;
+    width: 150px;
   }
 }
 @media only screen and (max-width: 360px) {
   .front-page-2 .about-responsive img {
-    top: 0;
-    margin: 115px 10px 0 0px;
+    margin: 2rem 1rem;
   }
 }
 .front-page-2 #fp2-responsive {
@@ -2288,24 +2300,12 @@ blockquote {
     display: block;
     font-size: 38px;
     position: relative;
-    left: 3rem;
-  }
-}
-@media only screen and (max-width: 783px) {
-  .front-page-2 #fp2-responsive {
-    position: relative;
-    left: 2rem;
   }
 }
 @media only screen and (max-width: 640px) {
   .front-page-2 #fp2-responsive {
     font-size: 30px;
-  }
-}
-@media (max-width: 900px) {
-  .front-page-2 #fp2-responsive::before {
-    width: 7.5% !important;
-    right: 7.5% !important;
+    margin-bottom: 3.5rem;
   }
 }
 .front-page-2 .wrap {
@@ -2329,11 +2329,6 @@ blockquote {
 }
 @media only screen and (max-width: 1024px) {
   .front-page-2 .wrap #text-5 {
-    max-width: 50%;
-  }
-}
-@media (max-width: 900px) {
-  .front-page-2 .wrap #text-5 {
     max-width: 100%;
   }
 }
@@ -2345,11 +2340,7 @@ blockquote {
 @media only screen and (max-width: 1024px) {
   .front-page-2 .wrap #media_image-2 {
     margin-left: 0;
-    width: 30%;
-  }
-}
-@media (max-width: 900px) {
-  .front-page-2 .wrap #media_image-2 {
+    width: 100%;
     display: none;
   }
 }
@@ -2360,6 +2351,11 @@ blockquote {
 @media (max-width: 900px) {
   .front-page-2 .wrap h4 {
     display: none;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .front-page-2 .wrap h4 {
+    text-align: center;
   }
 }
 .front-page-2 .wrap h4::before {
@@ -2375,14 +2371,9 @@ blockquote {
 }
 @media only screen and (max-width: 1024px) {
   .front-page-2 .wrap h4::before {
-    right: 14%;
+    right: 8%;
     top: 1.75rem;
-  }
-}
-@media (max-width: 900px) {
-  .front-page-2 .wrap h4::before {
-    width: 10.5%;
-    right: 11%;
+    width: 7%;
   }
 }
 @media only screen and (max-width: 783px) {
@@ -2392,8 +2383,11 @@ blockquote {
 }
 @media only screen and (max-width: 640px) {
   .front-page-2 .wrap h4::before {
-    width: 8.5%;
-    length: 9%;
+    width: 50%;
+    margin: 0 auto;
+    top: 4rem;
+    right: 0;
+    left: 0;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -2748,6 +2742,11 @@ div.wpcf7-acceptance-missing {
     width: calc(100% - 0rem);
     margin: 0;
     padding: 1rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .footer-widget-area {
+    padding: 0;
   }
 }
 
